@@ -1,6 +1,6 @@
 # Prototype Review — Example Output
 
-*Week 5 review of the UpdateDraft prototype.*
+*Step 5 review of the UpdateDraft prototype.*
 *Input: prototype-scope-output.md + what was built in prototype-with-claude*
 
 ---

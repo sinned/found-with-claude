@@ -50,8 +50,8 @@ Each SKILL.md follows the same format as `prototype-with-claude`:
 
 **The journey worked examples:**
 
-- `journeys/idea-to-demo-day.md` — the full 12-week arc
-- `journeys/week-01-find-a-problem.md` — first week in detail
+- `journeys/idea-to-demo-day.md` — the full journey arc
+- `journeys/week-01-find-a-problem.md` — Step 1 in detail
 
 **The example inputs and outputs:**
 
@@ -115,7 +115,7 @@ the wrong pitch. Claude can help with all of those.
 **Journey coherence:**
 - Do skill outputs chain into each other naturally?
 - Is it clear what comes before and after each skill?
-- Does the 12-week journey map feel realistic for a real founder?
+- Does the journey map feel realistic for a real founder?
 
 **Simulation responsibility:**
 - Does `/synthetic-customer-panel` include appropriate caveats?

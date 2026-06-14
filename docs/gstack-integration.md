@@ -67,7 +67,7 @@ The two repos are complementary. They do not overlap on any skill:
 
 ## The build sprint handoff
 
-The most important integration point is Week 5 of the founder journey:
+The most important integration point is Step 5 of the journey:
 
 ```
 founding-with-claude              gstack (or prototype-with-claude)
@@ -225,7 +225,7 @@ Use `prototype-with-claude` when the thing you are prototyping is the AI behavio
 feature that may or may not use AI (like the web app that wraps the skill and presents
 it to users).
 
-In many Week 5 build sprints, you will use both: `prototype-with-claude` to validate the
+In many Step 5 build sprints, you will use both: `prototype-with-claude` to validate the
 AI behavior, gstack to build and ship the product wrapper around it.
 
 ---

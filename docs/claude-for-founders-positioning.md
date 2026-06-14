@@ -60,7 +60,7 @@ review forces a clear verdict. These structures work because they prevent the mo
 common failure mode: avoiding the uncomfortable question.
 
 **A reusable skill pack that a founder can carry through their whole journey.**
-Clone it once. Use it from week 1 to Demo Day. The skills compound — the opportunity
+Clone it once. Use it from Step 1 to Demo Day. The skills compound — the opportunity
 memo feeds the customer synthesis, which feeds the product brief, which feeds the
 prototype scope.
 

@@ -1,4 +1,4 @@
-# Week 5 — Prototype with Claude
+# Step 5 — Prototype with Claude
 
 *How the prototype sprint works and how it connects to the sibling repo.*
 
@@ -7,7 +7,7 @@
 ## The starting point
 
 Sofia has:
-- A clear product brief from Week 4
+- A clear product brief from Step 4
 - A specific riskiest assumption: "Founders will trust AI-gathered numbers
   with source attribution and send them to investors without double-checking"
 - A 1-week time budget
@@ -135,15 +135,15 @@ enough users to call this validated, but enough to proceed to first-user outreac
 ## The handoff loop
 
 ```
-Week 4: /product-strategy-brief
+Step 4: /product-strategy-brief
      ↓
-Week 5a: /prototype-scope
+Step 5a: /prototype-scope
      ↓
 prototype-with-claude: /new-skill → /eval-skill → /improve-skill
      ↓
-Week 5b: /prototype-review
+Step 5b: /prototype-review
      ↓
-Week 6: /first-users-outreach
+Step 6: /first-users-outreach
 ```
 
 This loop is reusable. Every time the prototype needs to change based on user
@@ -154,7 +154,7 @@ feedback, Sofia can:
 
 ---
 
-## What a prototype week looks like for a non-technical founder
+## What a prototype sprint looks like for a non-technical founder
 
 The skill in `prototype-with-claude` is written in plain text (SKILL.md). A
 non-technical founder can:
@@ -167,7 +167,7 @@ What they cannot do without engineering help:
 - Deploy as a standalone product (the skill runs in Claude Code, not in a browser)
 - Handle security requirements for storing API credentials
 
-For a pure prototype week: Claude Code is enough. For a product that founders can
+For a focused prototype sprint: Claude Code is enough. For a product that founders can
 sign up for: you need an engineer or a no-code deployment layer.
 
 **Next: `journeys/week-06-first-users.md`**

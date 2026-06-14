@@ -71,7 +71,7 @@ A founder who has a product concept but is not sure it will land can run
 as a replacement for real interviews, but as preparation. The panel will surface
 the objections that the founder has not thought to prepare for.
 
-A founder in week 10 who has to fundraise can run `/fundraising-narrative` against
+A founder at Step 10 who has to fundraise can run `/fundraising-narrative` against
 their actual traction data and get an investor memo with an objection map that
 shows exactly where the story is weakest.
 

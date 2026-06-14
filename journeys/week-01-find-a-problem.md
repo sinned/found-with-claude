@@ -1,6 +1,6 @@
-# Week 1 — Find a Problem
+# Step 1 — Find a Problem
 
-*Detailed account of the first week in the idea-to-Demo-Day journey.*
+*Detailed account of Step 1 in the idea-to-Demo-Day journey.*
 
 ---
 
@@ -14,7 +14,7 @@ the same workflow problems repeated at every company she has worked at. She has
 2. Something to make quota planning less painful
 
 She has talked to 2 founder friends informally, but has not done structured
-discovery yet. Her goal for Week 1: figure out which problem area is worth pursuing.
+discovery yet. Her goal for Step 1: figure out which problem area is worth pursuing.
 
 ---
 
@@ -85,15 +85,15 @@ Sofia ran `/weekly-founder-review` with her notes from the week. The review prod
 - A clear hypothesis about what the product must do
 - 5 customer conversations scheduled for next week
 
-**The one thing for Week 2:**
+**The one thing for Step 2:**
 Do 5 customer interviews focused specifically on the trust question, not just
 the data gathering problem.
 
 ---
 
-## What Week 1 looks like for a different founder
+## What Step 1 looks like for a different founder
 
-Week 1 is not always this clean. Common patterns:
+Step 1 is not always this clean. Common patterns:
 
 **The founder who has too many ideas:** The opportunity map will force ranking.
 Most founders discover that their #1 idea has lower founder fit than they thought.
@@ -108,15 +108,15 @@ questions to answer before proceeding.
 
 ---
 
-## Transition to Week 2
+## Transition to Step 2
 
-At the end of Week 1, Sofia has:
+At the end of Step 1, Sofia has:
 - A ranked opportunity map with clear rationale
 - A specific reframe (trust > speed)
 - A question to probe in every customer interview
 - 5 interviews scheduled
 
 The opportunity map did not tell her what to build. It told her what to learn next.
-That is the right output for Week 1.
+That is the right output for Step 1.
 
 **Next: `journeys/week-02-customer-discovery.md`**

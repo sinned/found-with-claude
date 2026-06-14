@@ -1,4 +1,4 @@
-# Week 2 — Customer Discovery
+# Step 2 — Customer Discovery
 
 *How to run customer discovery and synthesize it using this skill pack.*
 
@@ -6,19 +6,19 @@
 
 ## The goal
 
-End of Week 2, you should have:
+End of Step 2, you should have:
 - 5-10 interviews completed
 - A synthesis that identifies the core patterns
-- A clear riskiest assumption to carry into Week 3
+- A clear riskiest assumption to carry into Step 3
 
 ---
 
 ## The setup
 
-Sofia came out of Week 1 with one reframe: the trust problem is more important
-than the gathering problem. Every interview in Week 2 should probe this question.
+Sofia came out of Step 1 with one reframe: the trust problem is more important
+than the gathering problem. Every interview in Step 2 should probe this question.
 
-Before starting Week 2 interviews, she set up:
+Before starting Step 2 interviews, she set up:
 - `examples/customer-transcript-[N].md` — one file per interview
 - `.claude/skills/customer-discovery-synthesizer/templates/interview-guide.md` — 
   used to prepare for each call
@@ -32,7 +32,7 @@ Sofia aimed for 5 and got 7 by asking every interviewee for a referral at the en
 **Interview pace:** 2 per day. Back-to-back is hard — you stop really listening
 by the third interview. 2 per day with reflection time between them is better.
 
-**What she changed from Week 1:**
+**What she changed from Step 1:**
 - She stopped pitching the product concept in the first half of the call
 - She started every call: "Walk me through what Sunday evening looks like."
   (Not: "I'm building a tool for investor updates." — that primes them to tell
@@ -40,7 +40,7 @@ by the third interview. 2 per day with reflection time between them is better.
 
 **The most useful question she added:**
 "You've tried to automate this before. What happened?" This question, which she
-did not use in Week 1, revealed the failure mode in 4 of 7 interviews: not
+did not use in Step 1, revealed the failure mode in 4 of 7 interviews: not
 technical failure, but trust failure. People stopped using the automation because
 they caught a wrong number once.
 
@@ -99,7 +99,7 @@ that requires source attribution."
 This reframe affects the prototype. A prototype that gathers data without attribution
 would fail the test. A prototype that gathers data with attribution might pass.
 
-**Week 2 decision:** Proceed to `/synthetic-customer-panel` to stress-test the
+**Step 2 decision:** Proceed to `/synthetic-customer-panel` to stress-test the
 concept before writing the product brief.
 
 **Next: `journeys/week-03-customer-simulation.md`** (not yet written)

@@ -6,7 +6,7 @@ All 13 skills in this pack, with description, input, output, and phase.
 
 ## `/founder-opportunity-map`
 
-**Phase:** Problem discovery (Week 1)
+**Phase:** Problem discovery (Step 1)
 **When to use:** At the start of a new venture, or when re-evaluating what to work on
 
 **Input:** Founder's background, domain expertise, hunches, messy notes
@@ -21,7 +21,7 @@ All 13 skills in this pack, with description, input, output, and phase.
 
 ## `/customer-discovery-synthesizer`
 
-**Phase:** Customer discovery (Week 2)
+**Phase:** Customer discovery (Step 2)
 **When to use:** After 2+ customer interviews — more is better
 
 **Input:** Raw interview notes, transcripts, voice memo summaries
@@ -36,7 +36,7 @@ All 13 skills in this pack, with description, input, output, and phase.
 
 ## `/synthetic-customer-panel`
 
-**Phase:** Customer simulation (Week 3)
+**Phase:** Customer simulation (Step 3)
 **When to use:** Before writing a product brief or prototyping — to stress-test a concept
 
 **Input:** Customer synthesis + concept to test
@@ -51,7 +51,7 @@ All 13 skills in this pack, with description, input, output, and phase.
 
 ## `/product-strategy-brief`
 
-**Phase:** Product strategy (Week 4)
+**Phase:** Product strategy (Step 4)
 **When to use:** When ready to define what to build — before opening any code
 
 **Input:** Opportunity memo + customer synthesis + panel output
@@ -64,7 +64,7 @@ All 13 skills in this pack, with description, input, output, and phase.
 
 ## `/prototype-scope`
 
-**Phase:** Prototype planning (Week 5)
+**Phase:** Prototype planning (Step 5)
 **When to use:** Before opening the build environment
 
 **Input:** Product strategy brief
@@ -80,7 +80,7 @@ All 13 skills in this pack, with description, input, output, and phase.
 
 ## `/prototype-review`
 
-**Phase:** Prototype evaluation (Week 5)
+**Phase:** Prototype evaluation (Step 5)
 **When to use:** After completing a build sprint in prototype-with-claude
 
 **Input:** Prototype scope + product brief + what was actually built
@@ -93,7 +93,7 @@ All 13 skills in this pack, with description, input, output, and phase.
 
 ## `/first-users-outreach`
 
-**Phase:** Early user acquisition (Week 6)
+**Phase:** Early user acquisition (Step 6)
 **When to use:** When ready to find the first 10 users
 
 **Input:** Product brief + prototype description
@@ -106,7 +106,7 @@ All 13 skills in this pack, with description, input, output, and phase.
 
 ## `/pmf-signal-review`
 
-**Phase:** PMF sprint (Week 7)
+**Phase:** PMF sprint (Step 7)
 **When to use:** After 10+ users, to assess whether the signals indicate product-market fit
 
 **Input:** User data, feedback, retention signals, qualitative observations
@@ -119,7 +119,7 @@ All 13 skills in this pack, with description, input, output, and phase.
 
 ## `/growth-experiment-backlog`
 
-**Phase:** Growth (Week 8)
+**Phase:** Growth (Step 8)
 **When to use:** When you have early PMF signals and want to grow systematically
 
 **Input:** PMF signal memo + current bottleneck
@@ -132,7 +132,7 @@ All 13 skills in this pack, with description, input, output, and phase.
 
 ## `/founder-hiring-scorecard`
 
-**Phase:** Hiring (Week 9)
+**Phase:** Hiring (Step 9)
 **When to use:** Before starting any hiring process for an early-stage role
 
 **Input:** Role description + team context + what this hire must unlock
@@ -145,7 +145,7 @@ All 13 skills in this pack, with description, input, output, and phase.
 
 ## `/fundraising-narrative`
 
-**Phase:** Fundraising (Week 10)
+**Phase:** Fundraising (Step 10)
 **When to use:** When you have real traction and are preparing to raise
 
 **Input:** Product brief + PMF signal review + traction data
@@ -161,7 +161,7 @@ is a hypothesis presentation.
 
 ## `/demo-day-script`
 
-**Phase:** Demo Day (Week 11)
+**Phase:** Demo Day (Step 11)
 **When to use:** When preparing for a high-stakes 2-minute pitch
 
 **Input:** Fundraising narrative + live demo flow
@@ -174,10 +174,10 @@ is a hypothesis presentation.
 
 ## `/weekly-founder-review`
 
-**Phase:** Every week
+**Phase:** Ongoing
 **When to use:** Every Friday (or Monday morning)
 
-**Input:** What happened this week — wins, blocks, conversations, data, personal state
+**Input:** What happened — wins, blocks, conversations, data, personal state
 **Output:** Structured weekly review: what was learned, what was done, what was heard, what to do next
 
 **Key outputs:**
@@ -212,9 +212,9 @@ is a hypothesis presentation.
         ↓
 /demo-day-script
 
-(every week throughout)
+(ongoing throughout)
 /weekly-founder-review
 ```
 
 Each skill's output is the next skill's input. Run them in order for the full
-12-week founder journey. Jump in at any phase if you are already past the earlier ones.
+journey. Jump in at any phase if you are already past the earlier ones.

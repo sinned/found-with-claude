@@ -283,7 +283,7 @@ Where to look:
 - `.claude/skills/` — the 13 founder skills (these are the primary artifact)
 - `docs/founder-journey-map.md` — how the skills connect
 - `docs/prototype-with-claude-integration.md` — integration with the sibling repo
-- `journeys/week-01-find-a-problem.md` — worked example of the first week
+- `journeys/week-01-find-a-problem.md` — worked example of Step 1
 - `examples/` — sample founder inputs and skill outputs
 
 What makes this different:

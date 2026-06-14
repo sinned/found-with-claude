@@ -54,7 +54,7 @@ evals, then export to production Python only after the behavior is proven. This
 avoids writing SDK code that is expensive to iterate on before the core logic
 is validated.
 
-The repo is most relevant for Week 5 of the founder journey: the prototype sprint.
+The repo is most relevant for Step 5 of the journey: the prototype sprint.
 It shows how to build an AI-powered feature (not just a UI or a data pipeline —
 but an agent that does a job) quickly and rigorously.
 

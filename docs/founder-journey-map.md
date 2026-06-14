@@ -19,13 +19,13 @@ Each phase answers one urgent founder question. Each has a skill.
 
 ## Phase map
 
-| Week | Phase | Core question | Skill |
+| Step | Phase | Core question | Skill |
 |------|-------|---------------|-------|
 | 1 | Find a problem | Is this pain real and underserved? | `/founder-opportunity-map` |
 | 2 | Customer discovery | Who has this problem, exactly? | `/customer-discovery-synthesizer` |
 | 3 | Customer simulation | What would real users say about this? | `/synthetic-customer-panel` |
 | 4 | Product strategy | What should we build and why? | `/product-strategy-brief` |
-| 5 | Prototype | Can we build a working version in a week? | `/prototype-scope` → `prototype-with-claude` |
+| 5 | Prototype | Can we build a working version fast? | `/prototype-scope` → `prototype-with-claude` |
 | 5 | Prototype review | Does the prototype prove the thesis? | `/prototype-review` |
 | 6 | First users | Who are the first 10 users and how do we reach them? | `/first-users-outreach` |
 | 7 | PMF sprint | Are we seeing the signals that matter? | `/pmf-signal-review` |
@@ -33,7 +33,7 @@ Each phase answers one urgent founder question. Each has a skill.
 | 9 | Hiring | Who is the right first hire? | `/founder-hiring-scorecard` |
 | 10 | Fundraising | What is the story investors need to hear? | `/fundraising-narrative` |
 | 11 | Demo Day | Can we land this in 2 minutes on stage? | `/demo-day-script` |
-| Weekly | Review | What did we learn this week? | `/weekly-founder-review` |
+| Ongoing | Review | What did we learn? | `/weekly-founder-review` |
 
 ---
 
@@ -150,7 +150,7 @@ See `journeys/idea-to-demo-day.md` for the full worked example.
 
 ## The Demo Day moment
 
-Week 11 is Demo Day. If you have followed the journey:
+Step 11 is Demo Day. If you have followed the journey:
 
 - You know the problem is real (you have synthesis from 10+ interviews)
 - You know who has it (you have a clear target customer)

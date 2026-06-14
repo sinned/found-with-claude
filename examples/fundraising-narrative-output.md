@@ -1,7 +1,7 @@
 # Fundraising Narrative — Example Output
 
 *Example investor memo from the investor update automation use case.*
-*Based on Week 10 context: 25 users, 70% retention, 3 unprompted referrals.*
+*Based on Step 10 context: 25 users, 70% retention, 3 unprompted referrals.*
 
 ---
 

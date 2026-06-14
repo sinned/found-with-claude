@@ -1,17 +1,17 @@
 # YC-Style Demo Day Track
 
 How to use this skill pack in the context of a YC-style accelerator program —
-or any intensive 10-12 week company-building sprint.
+or any intensive company-building sprint.
 
 ---
 
 ## The YC model and this skill pack
 
 YC runs 3-month batches. The arc:
-- Weeks 1-2: figure out what to build (or build faster if you already know)
-- Weeks 3-8: build and get users
-- Weeks 9-10: figure out what your metrics mean and get more users
-- Weeks 11-12: Demo Day prep
+- Steps 1-2: figure out what to build (or build faster if you already know)
+- Steps 3-8: build and get users
+- Steps 9-10: figure out what your metrics mean and get more users
+- Steps 11-12: Demo Day prep
 
 This skill pack maps onto that arc. But it adds structure to phases that YC
 leaves relatively unstructured — especially the problem discovery and PMF
@@ -19,36 +19,36 @@ analysis phases.
 
 ---
 
-## Week-by-week mapping
+## Step-by-step mapping
 
-| YC Phase | YC Focus | This skill pack | What you produce |
-|----------|----------|-----------------|-----------------|
-| Wk 1 | Find the right thing to build | `/founder-opportunity-map` | Opportunity memo |
-| Wk 2 | Talk to customers | `/customer-discovery-synthesizer` | Interview synthesis |
-| Wk 3 | Stress-test before building | `/synthetic-customer-panel` | Panel reactions |
-| Wk 4 | What exactly are we building? | `/product-strategy-brief` | One-page brief |
-| Wk 5 | Build v1 | `/prototype-scope` → prototype-with-claude | Working prototype |
-| Wk 6 | Get first users | `/first-users-outreach` | Outreach + onboarding |
-| Wk 7 | Read the signals | `/pmf-signal-review` | Signal memo |
-| Wk 8 | Grow | `/growth-experiment-backlog` | Experiment backlog |
-| Wk 9 | Hire | `/founder-hiring-scorecard` | Hiring scorecard |
-| Wk 10 | Fundraise | `/fundraising-narrative` | Investor memo |
-| Wk 11 | Demo Day prep | `/demo-day-script` | 2-min script |
-| Every wk | Partner meetings | `/weekly-founder-review` | Weekly review |
+| Step | YC Focus | This skill pack | What you produce |
+|------|----------|-----------------|-----------------|
+| 1 | Find the right thing to build | `/founder-opportunity-map` | Opportunity memo |
+| 2 | Talk to customers | `/customer-discovery-synthesizer` | Interview synthesis |
+| 3 | Stress-test before building | `/synthetic-customer-panel` | Panel reactions |
+| 4 | What exactly are we building? | `/product-strategy-brief` | One-page brief |
+| 5 | Build v1 | `/prototype-scope` → prototype-with-claude | Working prototype |
+| 6 | Get first users | `/first-users-outreach` | Outreach + onboarding |
+| 7 | Read the signals | `/pmf-signal-review` | Signal memo |
+| 8 | Grow | `/growth-experiment-backlog` | Experiment backlog |
+| 9 | Hire | `/founder-hiring-scorecard` | Hiring scorecard |
+| 10 | Fundraise | `/fundraising-narrative` | Investor memo |
+| 11 | Demo Day prep | `/demo-day-script` | 2-min script |
+| Ongoing | Partner meetings | `/weekly-founder-review` | Review |
 
 ---
 
 ## The Demo Day preparation track
 
-If you are in week 9 and Demo Day is in 2 weeks:
+If you are at Step 9 and Demo Day is soon:
 
-**Week 9:**
+**Step 9:**
 1. Run `/pmf-signal-review` — you need to know your signals cold before writing the narrative
 2. Run `/fundraising-narrative` — build the investor memo first, Demo Day script second
 3. Share the memo with 2-3 trusted people for feedback
 4. Revise
 
-**Week 10:**
+**Step 10:**
 1. Run `/demo-day-script` from the revised narrative
 2. Write 5 hook variations, test them with someone not in your world
 3. Practice the script 10+ times out loud (not in your head — out loud)

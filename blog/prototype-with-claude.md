@@ -4,12 +4,12 @@
 
 ---
 
-Week 5 is prototype week.
+Step 5 is the prototype step.
 
 You have done the interviews. You have the synthesis. You have a product brief with
 a riskiest assumption. You know what you need to build and what you are trying to prove.
 
-Now you need to build it in a week.
+Now you need to build it.
 
 This is where `prototype-with-claude` comes in.
 
@@ -104,7 +104,7 @@ Most startup AI features fit one of these three shapes.
 
 The skill in `prototype-with-claude` is what gets you from "I know what the
 agent should do" to "I have a working demo" in 1-5 days without writing production
-code. It is the right tool for Week 5.
+code. It is the right tool for Step 5.
 
 ---
 

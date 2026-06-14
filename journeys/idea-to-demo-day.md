@@ -1,4 +1,4 @@
-# Idea to Demo Day: The 12-Week Journey
+# Idea to Demo Day
 
 A worked example of the full founder journey using the skills in this pack.
 Based on a fictional founder building an investor update automation tool.
@@ -13,7 +13,7 @@ Based on a fictional founder building an investor update automation tool.
 
 ---
 
-## Week 1 — Find a problem
+## Step 1 — Find a problem
 
 **Skill used:** `/founder-opportunity-map`
 **Input:** Sofia's RevOps background, a few conversations with founder friends, messy notes
@@ -27,14 +27,14 @@ not technology.
 **Output:** Opportunity memo with 3 ranked areas and a clear "key question to answer"
 for each.
 
-**Week 1 decision:** Pursue opportunity #1. Talk to 5 more founders specifically
+**Step 1 decision:** Pursue opportunity #1. Talk to 5 more founders specifically
 about trust.
 
 See `journeys/week-01-find-a-problem.md` for the detailed account.
 
 ---
 
-## Week 2 — Customer discovery
+## Step 2 — Customer discovery
 
 **Skill used:** `/customer-discovery-synthesizer`
 **Input:** 7 customer interviews (5 seed-stage founders, 2 Series A)
@@ -51,12 +51,12 @@ complained about investor updates together. Distribution insight.
 
 **Output:** Customer synthesis with patterns, quotes, and open questions.
 
-**Week 2 decision:** The problem is real. The hard part is trust. Proceed to simulation
+**Step 2 decision:** The problem is real. The hard part is trust. Proceed to simulation
 to stress-test the concept before writing the product brief.
 
 ---
 
-## Week 3 — Customer simulation
+## Step 3 — Customer simulation
 
 **Skill used:** `/synthetic-customer-panel`
 **Input:** Customer synthesis + concept: "auto-pull Stripe + Mercury + Linear data into a weekly update draft"
@@ -73,12 +73,12 @@ are presented without source links, the finance-minded founder will not adopt."
 **Output:** Synthetic panel with 5 archetypes, cross-panel analysis, and 3 hypotheses
 to test with real customers.
 
-**Week 3 decision:** Add auditability to the core product concept before writing
+**Step 3 decision:** Add auditability to the core product concept before writing
 the brief. Every number must show its source.
 
 ---
 
-## Week 4 — Product strategy
+## Step 4 — Product strategy
 
 **Skill used:** `/product-strategy-brief`
 **Input:** Opportunity memo + synthesis + panel output
@@ -93,18 +93,18 @@ Sofia wrote the product brief. Key decisions made in this session:
 **Output:** One-page product brief with target customer, solution hypothesis, key bets,
 and success criteria for the prototype.
 
-**Week 4 decision:** Ready to scope the prototype. The brief is clear enough.
+**Step 4 decision:** Ready to scope the prototype. The brief is clear enough.
 
 ---
 
-## Week 5 — Prototype
+## Step 5 — Prototype
 
 **Skills used:** `/prototype-scope` → prototype-with-claude → `/prototype-review`
 **Input:** Product brief
 
 **What happened:**
 Sofia ran `/prototype-scope`. The scope came out to one job: "take a seed-stage
-founder's Stripe, Mercury, and Linear credentials, pull the current week's data,
+founder's Stripe, Mercury, and Linear credentials, pull the current period's data,
 and produce a pre-filled investor update template with source links for every number."
 
 Sofia opened `https://github.com/sinned/prototype-with-claude` and used `/new-skill` to create a skill
@@ -120,12 +120,12 @@ Sofia ran `/prototype-review`. Verdict: INCONCLUSIVE. The prototype demonstrated
 data gathering, but the "trust" test required showing source links inline in the
 output — which the first version did not do. The riskiest assumption was not yet tested.
 
-**Week 5 decision:** Rebuild the output format to include source attribution for
+**Step 5 decision:** Rebuild the output format to include source attribution for
 every number. Then find 3 founders to try it with real data.
 
 ---
 
-## Week 6 — First users
+## Step 6 — First users
 
 **Skill used:** `/first-users-outreach`
 **Input:** Product brief + revised prototype description
@@ -142,15 +142,15 @@ In 4 live sessions:
 - 2 of 4 sent the auto-generated numbers to their investors without manually checking
 - 1 asked for Google Sheets instead of a Google Doc (noted as roadmap item)
 
-**Week 6 signal:** 2 of 4 sent without checking. This is the first evidence the
+**Step 6 signal:** 2 of 4 sent without checking. This is the first evidence the
 trust problem is solvable.
 
 ---
 
-## Week 7 — PMF sprint
+## Step 7 — PMF sprint
 
 **Skill used:** `/pmf-signal-review`
-**Input:** Week 6-7 user data: 4 initial users + 3 referrals from those 4 users
+**Input:** Steps 6–7 user data: 4 initial users + 3 referrals from those 4 users
 
 **What happened:**
 Seven users in 2 weeks. Sofia ran the PMF signal review. Key signals:
@@ -161,12 +161,12 @@ Seven users in 2 weeks. Sofia ran the PMF signal review. Key signals:
 **Verdict:** MIXED SIGNALS. Retention is promising. Sample is too small. Need 20+
 users before drawing strong conclusions.
 
-**Week 7 decision:** Expand to 20+ users before writing the fundraising narrative.
+**Step 7 decision:** Expand to 20+ users before writing the fundraising narrative.
 Run the growth experiment backlog to decide how to get there.
 
 ---
 
-## Week 8 — Growth experiments
+## Step 8 — Growth experiments
 
 **Skill used:** `/growth-experiment-backlog`
 **Input:** PMF signal review + current bottleneck (acquisition — 7 users, need 20+)
@@ -181,7 +181,7 @@ Results after 2 weeks: Experiments 1 and 2 worked. 18 new users in 2 weeks. 25 t
 
 ---
 
-## Week 9 — Hiring
+## Step 9 — Hiring
 
 **Skill used:** `/founder-hiring-scorecard`
 **Input:** Role: first engineer (full-stack, integration-focused)
@@ -198,7 +198,7 @@ Sofia interviewed 5 candidates. The scorecard made the decision clear.
 
 ---
 
-## Week 10 — Fundraising
+## Step 10 — Fundraising
 
 **Skill used:** `/fundraising-narrative`
 **Input:** Product brief + PMF signals (25 users, 70% retention, 3 unprompted referrals)
@@ -217,7 +217,7 @@ founders, not for Stripe. By the time Stripe considers this, we will have 2,000 
 
 ---
 
-## Week 11 — Demo Day
+## Step 11 — Demo Day
 
 **Skill used:** `/demo-day-script`
 **Input:** Fundraising narrative + live demo flow
@@ -234,16 +234,16 @@ Two-minute Demo Day script. 3 meetings booked in the week after Demo Day.
 
 ---
 
-## Week 12 — Post-Demo Day
+## After Demo Day
 
 **Skill used:** `/weekly-founder-review`
-**Input:** Everything from the past 12 weeks
+**Input:** Everything from the journey so far
 
-**Week 12 reflection:**
+**Reflection:**
 
 What worked: the weekly review kept decisions grounded in evidence. Every major
 pivot (dropping Linear from v0, adding source attribution, focusing on seed-stage)
-came from a weekly review that surfaced new evidence.
+came from a review session that surfaced new evidence.
 
 What was hardest: getting to 25 users. The product had to be good enough that
 people would recommend it without being asked. That took longer than expected.
@@ -253,7 +253,7 @@ seed round close.
 
 ---
 
-The journey from idea to Demo Day took 11 weeks. The skills did not make decisions
+The journey from idea to Demo Day took 11 steps. The skills did not make decisions
 — Sofia made the decisions. The skills compressed the time between input and insight
 at every phase: turning notes into memos, interviews into synthesis, hunches into
 structured bets, and numbers into a 2-minute argument that investors wanted to hear.
