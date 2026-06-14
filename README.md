@@ -47,7 +47,7 @@ structured workflow — not a chatbot conversation, but a repeatable founder pro
 ## Why this exists
 
 Most "AI for founders" tooling treats founders as developers and stops at software
-prototyping. But prototyping is week 5 of a 12-week journey.
+prototyping. But prototyping is step 5 of an 11-step journey.
 
 Before you write a line of code, you need to:
 - Find a problem that is genuinely painful
@@ -161,9 +161,9 @@ The second output is almost always different. That difference is what you learne
 
 ## The idea-to-Demo-Day journey
 
-See `journeys/` for week-by-week worked examples. The full arc:
+See `journeys/` for worked examples. The full arc:
 
-| Week | Focus | Primary skill |
+| Step | Focus | Primary skill |
 |------|-------|---------------|
 | 1 | Find a problem | `/founder-opportunity-map` |
 | 2 | Customer discovery | `/customer-discovery-synthesizer` |
@@ -176,8 +176,7 @@ See `journeys/` for week-by-week worked examples. The full arc:
 | 9 | Hiring | `/founder-hiring-scorecard` |
 | 10 | Fundraising | `/fundraising-narrative` |
 | 11 | Demo Day | `/demo-day-script` |
-| 12 | Post-Demo Day | `/weekly-founder-review` |
-| Every week | Review | `/weekly-founder-review` |
+| Ongoing | Review | `/weekly-founder-review` |
 
 ---
 
@@ -204,7 +203,7 @@ the weekly `/retro` and `/weekly-founder-review`, and when to use gstack vs.
 ## Where `prototype-with-claude` fits
 
 This repo covers the full founder journey. The sibling repo `../prototype-with-claude`
-is the dedicated build environment for Week 5 — the prototyping sprint itself.
+is the dedicated build environment for the prototyping step.
 
 **What `prototype-with-claude` does:**
 - Teaches the Write SKILL.md → eval → improve → export to production Python workflow
@@ -230,14 +229,14 @@ See `docs/prototype-with-claude-integration.md` for the full integration context
 You are a founder who suspects there is a pain around how early-stage startups
 manage their investor updates.
 
-**Week 1 — Map the opportunity:**
+**Step 1 — Map the opportunity:**
 ```
 /founder-opportunity-map
 ```
 Output: ranked opportunity memo. Investor updates rank #2. Your #1 surprise: the
 real pain is not writing the update — it is synthesizing what actually happened.
 
-**Week 2 — Talk to founders:**
+**Step 2 — Talk to founders:**
 You do 7 calls. Drop the transcripts in `examples/`. Run:
 ```
 /customer-discovery-synthesizer
@@ -245,14 +244,14 @@ You do 7 calls. Drop the transcripts in `examples/`. Run:
 Output: synthesis across 7 interviews. Clear pattern: founders spend 3-4 hours
 pulling together data that lives in 6 different tools before they can write a word.
 
-**Week 3 — Stress-test the concept:**
+**Step 3 — Stress-test the concept:**
 ```
 /synthetic-customer-panel
 ```
 Output: 5 founder archetypes react to your proposed concept. Two archetypes say
 they would use it. Three say they already have a workaround.
 
-**Week 4 — Write the strategy:**
+**Step 4 — Write the strategy:**
 ```
 /product-strategy-brief
 ```
@@ -260,13 +259,13 @@ Output: one-page brief. Target: seed-stage founders with 10-20 investors. Core b
 auto-pull data from Stripe, Linear, and bank accounts. The brief reveals your
 riskiest assumption: founders trust AI-generated numbers in investor-facing docs.
 
-**Week 5 — Build:**
+**Step 5 — Build:**
 ```
 /prototype-scope
 ```
-Output: scope document. One week. One job. Open `../prototype-with-claude`. Build it.
+Output: scope document. One job. Open `../prototype-with-claude`. Build it.
 
-**Week 6 — Get users:**
+**Step 6 — Get users:**
 ```
 /first-users-outreach
 ```
