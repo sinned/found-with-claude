@@ -79,14 +79,14 @@ After `/product-strategy-brief`, you have enough to scope a prototype.
 ```
 /prototype-scope
         ↓
-Open ../prototype-with-claude
+Open https://github.com/sinned/prototype-with-claude
 Build the skill / validate behavior
         ↓
 /prototype-review
 ```
 
 `/prototype-scope` defines what to build and what success looks like.
-The sibling repo `../prototype-with-claude` is where you build it.
+The sibling repo `https://github.com/sinned/prototype-with-claude` is where you build it.
 `/prototype-review` evaluates the result against the original strategy.
 
 See `docs/prototype-with-claude-integration.md` for the full handoff context.

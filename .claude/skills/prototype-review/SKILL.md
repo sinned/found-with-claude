@@ -17,8 +17,8 @@ Look for:
 - Evidence of what was built (one of these):
   - Output files from the prototype itself
   - A description of what was built from the founder
-  - Eval reports from `../prototype-with-claude/output/evals/`
-  - The SKILL.md that was created in `../prototype-with-claude/.claude/skills/`
+  - Eval reports from `https://github.com/sinned/prototype-with-claude/output/evals/`
+  - The SKILL.md that was created in `https://github.com/sinned/prototype-with-claude/.claude/skills/`
 
 If the founder has not built anything yet, stop and say: "Run this review after
 you have something to show. If you have not started building, run `/prototype-scope` first."

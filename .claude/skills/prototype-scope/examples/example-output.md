@@ -46,7 +46,7 @@ back to verify numbers in Stripe — citing the source tags as the reason.
 tags are not trusted.
 
 ## Handoff to prototype-with-claude
-1. Open `../prototype-with-claude` and run `/new-skill`
+1. Open `https://github.com/sinned/prototype-with-claude` and run `/new-skill`
 2. Name the skill `generate-investor-update`
 3. Use this scope document when Claude asks "what is the job?"
 4. Test case for evals: a founder with a live Stripe account producing a

@@ -59,7 +59,7 @@ customer quotes, usage data, or anything else. Skills are designed to work from 
 When a founder reaches the prototyping phase:
 1. Run `/prototype-scope` to define what to build
 2. Open your product repo and use gstack (`/office-hours` → `/autoplan` → `/review` → `/qa` → `/ship`)
-   — OR — open `../prototype-with-claude` for AI behavior prototyping specifically
+   — OR — open `https://github.com/sinned/prototype-with-claude` for AI behavior prototyping specifically
 3. Run `/prototype-review` after the build to evaluate the result
 
 See `docs/prototype-with-claude-integration.md` and `docs/gstack-integration.md`

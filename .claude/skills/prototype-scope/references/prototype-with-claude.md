@@ -1,6 +1,6 @@
 # Reference: prototype-with-claude
 
-When you open `../prototype-with-claude`, here is what you will find and what to do.
+When you open `https://github.com/sinned/prototype-with-claude`, here is what you will find and what to do.
 
 ## What the repo is
 

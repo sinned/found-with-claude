@@ -14,7 +14,7 @@ After running this skill, the founder opens their product repo and builds. Two p
 → `/review` → `/qa` → `/ship`). Best when building a product feature, not just an
 AI behavior. See `docs/gstack-integration.md`.
 
-**Path B — AI behavior prototyping:** Open `../prototype-with-claude` and use `/new-skill`
+**Path B — AI behavior prototyping:** Open `https://github.com/sinned/prototype-with-claude` and use `/new-skill`
 to write and validate a Claude skill. Best when the prototype IS the AI behavior.
 See `references/prototype-with-claude.md`.
 
@@ -52,7 +52,7 @@ A prototype scope without a strategy brief will produce the wrong thing."
    works? What would prove it does not?
 
 7. **Write the prototype readiness checklist** — What must be true before the
-   founder opens `../prototype-with-claude` and starts building?
+   founder opens `https://github.com/sinned/prototype-with-claude` and starts building?
 
 8. **Write the handoff note** — Specific instructions for what to do when they
    open the sibling repo.
@@ -103,7 +103,7 @@ A prototype scope without a strategy brief will produce the wrong thing."
 
 ## Readiness checklist
 
-Before opening `../prototype-with-claude`:
+Before opening `https://github.com/sinned/prototype-with-claude`:
 - [ ] Product brief is written and reviewed
 - [ ] Riskiest assumption is clearly stated
 - [ ] The one job can be stated in one sentence
@@ -129,7 +129,7 @@ See `docs/gstack-integration.md` for how to pass context from this scope into `/
 
 If the prototype IS an AI agent behavior (a Claude skill):
 
-1. Open `../prototype-with-claude` in Claude Code
+1. Open `https://github.com/sinned/prototype-with-claude` in Claude Code
 2. Run `/new-skill` — paste the "one job" and success criteria from this document
 3. Run `/eval-skill` after your first pass
 4. Run `/improve-skill` to fix failures

@@ -11,7 +11,7 @@ Sofia has:
 - A specific riskiest assumption: "Founders will trust AI-gathered numbers
   with source attribution and send them to investors without double-checking"
 - A 1-week time budget
-- Claude Code and access to `../prototype-with-claude`
+- Claude Code and access to `https://github.com/sinned/prototype-with-claude`
 
 ---
 
@@ -48,10 +48,11 @@ going back to check Stripe.
 
 ## Monday afternoon: open the sibling repo
 
-Sofia opened a new terminal tab and navigated to `../prototype-with-claude`.
+Sofia cloned [prototype-with-claude](https://github.com/sinned/prototype-with-claude) and opened it in a new terminal tab.
 
 ```bash
-cd ../prototype-with-claude
+git clone https://github.com/sinned/prototype-with-claude
+cd prototype-with-claude
 claude
 ```
 

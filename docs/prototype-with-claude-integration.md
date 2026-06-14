@@ -1,7 +1,7 @@
 # Prototype with Claude — Integration Notes
 
 This file documents the relationship between `founding-with-claude` and its sibling
-repo `../prototype-with-claude`, based on direct inspection of the sibling repo.
+repo `https://github.com/sinned/prototype-with-claude`, based on direct inspection of the sibling repo.
 
 ---
 
@@ -89,7 +89,7 @@ how to write a skill, test it, improve it, and ship it.
 ## Which skills should reference it
 
 - **`/prototype-scope`** — references the sibling repo as the destination after scoping.
-  The prototype scope document should include a note to open `../prototype-with-claude`
+  The prototype scope document should include a note to open `https://github.com/sinned/prototype-with-claude`
   and use `/new-skill` to start building.
 
 - **`/prototype-review`** — references the sibling repo's output (the validated skill and
@@ -103,7 +103,7 @@ founder context on what they will find when they open the sibling repo.
 
 ## What a founder should use it for
 
-Open `../prototype-with-claude` when you have:
+Open `https://github.com/sinned/prototype-with-claude` when you have:
 1. A completed `/prototype-scope` document (from this repo)
 2. A clear answer to: "What is the one job the prototype should do?"
 3. A test case in mind: "If the prototype does this for this input, it works"

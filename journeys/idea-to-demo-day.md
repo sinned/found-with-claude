@@ -107,7 +107,7 @@ Sofia ran `/prototype-scope`. The scope came out to one job: "take a seed-stage
 founder's Stripe, Mercury, and Linear credentials, pull the current week's data,
 and produce a pre-filled investor update template with source links for every number."
 
-Sofia opened `../prototype-with-claude` and used `/new-skill` to create a skill
+Sofia opened `https://github.com/sinned/prototype-with-claude` and used `/new-skill` to create a skill
 called `generate-investor-update`. She wrote the SKILL.md in 20 minutes based on
 the scope document.
 

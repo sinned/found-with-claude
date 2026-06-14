@@ -1,6 +1,6 @@
 # Reference: prototype-with-claude (for Prototype Review)
 
-When running `/prototype-review`, look for evidence of the build in `../prototype-with-claude`.
+When running `/prototype-review`, look for evidence of the build in `https://github.com/sinned/prototype-with-claude`.
 
 ## Where to find prototype output
 

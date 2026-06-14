@@ -202,7 +202,7 @@ the weekly `/retro` and `/weekly-founder-review`, and when to use gstack vs.
 
 ## Where `prototype-with-claude` fits
 
-This repo covers the full founder journey. The sibling repo `../prototype-with-claude`
+This repo covers the full founder journey. The sibling repo `https://github.com/sinned/prototype-with-claude`
 is the dedicated build environment for the prototyping step.
 
 **What `prototype-with-claude` does:**
@@ -213,7 +213,7 @@ is the dedicated build environment for the prototyping step.
 
 **How it connects to this repo:**
 1. `/prototype-scope` (here) → defines what to build
-2. Open `../prototype-with-claude` → build it using Claude Skills
+2. Open `https://github.com/sinned/prototype-with-claude` → build it using Claude Skills
 3. `/prototype-review` (here) → evaluate the result against the original strategy
 
 The prototyping sprint is where you build the AI behavior your product depends on.
@@ -263,7 +263,7 @@ riskiest assumption: founders trust AI-generated numbers in investor-facing docs
 ```
 /prototype-scope
 ```
-Output: scope document. One job. Open `../prototype-with-claude`. Build it.
+Output: scope document. One job. Open `https://github.com/sinned/prototype-with-claude`. Build it.
 
 **Step 6 — Get users:**
 ```
