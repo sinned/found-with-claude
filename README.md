@@ -1,4 +1,4 @@
-# Founding with Claude
+# found-with-claude
 
 A Claude Skills pack for founders building from idea to Demo Day.
 
@@ -104,8 +104,8 @@ to be fast: 10 minutes of input, structured output you can act on the same day.
 
 ```bash
 # 1. Clone
-git clone https://github.com/sinned/founding-with-claude
-cd founding-with-claude
+git clone https://github.com/sinned/found-with-claude
+cd found-with-claude
 
 # 2. Open Claude Code
 claude
@@ -191,7 +191,7 @@ ship. It installs once to `~/.claude/skills/gstack/` and works in any repo.
 and `/autoplan` plan it. `/review`, `/qa`, `/ship` build and ship it. `/prototype-review`
 (here) evaluates the result.
 
-gstack and `founding-with-claude` are complementary — gstack lives inside the build
+gstack and `found-with-claude` are complementary — gstack lives inside the build
 sprint, this repo covers everything around it.
 
 See `docs/gstack-integration.md` for the full integration guide, including how to
@@ -277,7 +277,7 @@ in 5 days.
 
 ## For Anthropic reviewers
 
-This repo is the "Founding with Claude" companion to `prototype-with-claude`.
+This repo is the `found-with-claude` companion to `prototype-with-claude`.
 
 Where to look:
 - `CLAUDE.md` — project-level instructions for Claude Code
@@ -327,10 +327,10 @@ company-building loop, not just the prototyping phase.
 
 ## The broader "Claude for…" idea
 
-`founding-with-claude` is one instance of a pattern:
+`found-with-claude` is one instance of a pattern:
 
 - `prototype-with-claude` → Claude for AI feature prototyping
-- `founding-with-claude` → Claude for company building
+- `found-with-claude` → Claude for company building
 - (future) `investing-with-claude` → Claude for sourcing, diligence, and portfolio ops
 - (future) `research-with-claude` → Claude for academic research workflows
 
