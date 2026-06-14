@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Founding with Claude — Idea to Demo Day</title>
+  <meta name="description" content="13 structured Claude Skills for the full founder journey — problem discovery, customer synthesis, product strategy, PMF, fundraising, and Demo Day.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FAF9F7;
+      --surface: #FFFFFF;
+      --surface-subtle: #F5F0EA;
+      --border: #E8DDD4;
+      --border-strong: #D4C4B4;
+      --accent: #D97757;
+      --accent-hover: #C4623E;
+      --accent-bg: #FDF1EB;
+      --accent-border: #F2D0BE;
+      --text-primary: #1A1714;
+      --text-secondary: #6B5C52;
+      --text-muted: #9A8878;
+      --radius: 12px;
+      --radius-sm: 8px;
+      --dark-bg: #1A1714;
+      --dark-surface: #231F1C;
+      --dark-border: #2D2520;
+      --dark-text: #FAF9F7;
+      --dark-muted: #9A8878;
+      --code-highlight: #F5C4A0;
+      --code-skill: #7DD4A8;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 249, 247, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+    .nav-logo-mark {
+      width: 30px;
+      height: 30px;
+      background: var(--accent);
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 15px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-link {
+      font-size: 13px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-link:hover {
+      background: var(--surface-subtle);
+      color: var(--text-primary);
+    }
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--text-primary);
+      color: white;
+      padding: 7px 15px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .nav-cta:hover { opacity: 0.82; }
+
+    /* ─── HERO ─── */
+    .hero {
+      padding: 80px 24px 72px;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--accent-bg);
+      border: 1px solid var(--accent-border);
+      color: var(--accent);
+      padding: 5px 14px;
+      border-radius: 100px;
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .hero-eyebrow-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+    .hero h1 {
+      font-size: clamp(40px, 7vw, 72px);
+      font-weight: 700;
+      line-height: 1.07;
+      letter-spacing: -0.03em;
+      max-width: 820px;
+      margin-bottom: 22px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+    .hero-sub {
+      font-size: 17px;
+      color: var(--text-secondary);
+      max-width: 520px;
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: white;
+      padding: 11px 22px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.15s, transform 0.1s;
+    }
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+    }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--surface);
+      color: var(--text-primary);
+      padding: 11px 22px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      transition: border-color 0.15s, transform 0.1s;
+    }
+    .btn-secondary:hover {
+      border-color: var(--border-strong);
+      transform: translateY(-1px);
+    }
+
+    /* ─── STATS BAR ─── */
+    .stats-bar {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .stats-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .stat {
+      padding: 28px 24px;
+      border-right: 1px solid var(--border);
+      text-align: center;
+    }
+    .stat:last-child { border-right: none; }
+    .stat-number {
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 5px;
+      font-weight: 500;
+    }
+
+    /* ─── SECTIONS ─── */
+    .section {
+      padding: 72px 24px;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+    .section-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: clamp(26px, 4vw, 40px);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      margin-bottom: 12px;
+      line-height: 1.15;
+    }
+    .section-desc {
+      font-size: 15px;
+      color: var(--text-secondary);
+      max-width: 520px;
+      line-height: 1.7;
+      margin-bottom: 44px;
+    }
+
+    /* ─── LOOP ─── */
+    .loop-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 40px 32px 32px;
+      margin-bottom: 40px;
+    }
+    .loop-nodes {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+    .loop-node {
+      background: var(--accent-bg);
+      border: 1px solid var(--accent-border);
+      color: var(--accent);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 12.5px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .loop-arr {
+      color: var(--border-strong);
+      font-size: 15px;
+    }
+    .loop-return {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 4px;
+    }
+    .loop-return-line {
+      flex: 1;
+      max-width: 200px;
+      height: 1px;
+      background: var(--border);
+    }
+    .loop-return-label {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* ─── PRINCIPLES ─── */
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 14px;
+    }
+    .principle-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+    }
+    .principle-icon {
+      font-size: 22px;
+      margin-bottom: 12px;
+      line-height: 1;
+    }
+    .principle-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 7px;
+      line-height: 1.3;
+    }
+    .principle-desc {
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .principle-desc code {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 11px;
+      color: var(--accent);
+      background: var(--accent-bg);
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+
+    /* ─── DIVIDER ─── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ─── SKILL MAP ─── */
+    .phase-group {
+      margin-bottom: 44px;
+    }
+    .phase-header {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+    .phase-pill {
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+    .phase-name {
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .phase-q {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 14px;
+    }
+    .skill-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .skill-card:hover {
+      border-color: var(--border-strong);
+      box-shadow: 0 4px 16px rgba(26, 23, 20, 0.07);
+    }
+    .skill-cmd {
+      display: inline-block;
+      background: var(--dark-bg);
+      color: var(--code-highlight);
+      padding: 3px 9px;
+      border-radius: 6px;
+      font-family: 'SF Mono', 'Fira Code', 'Fira Mono', monospace;
+      font-size: 11.5px;
+      font-weight: 500;
+      margin-bottom: 12px;
+      letter-spacing: 0.01em;
+    }
+    .skill-title {
+      font-size: 14.5px;
+      font-weight: 600;
+      margin-bottom: 7px;
+    }
+    .skill-desc {
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+    .skill-io {
+      border-top: 1px solid var(--border);
+      padding-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .io-row {
+      display: flex;
+      gap: 8px;
+      font-size: 11.5px;
+      line-height: 1.5;
+    }
+    .io-label {
+      color: var(--text-muted);
+      font-weight: 600;
+      min-width: 34px;
+      flex-shrink: 0;
+      font-size: 10px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding-top: 1px;
+    }
+    .io-value {
+      color: var(--text-secondary);
+    }
+
+    /* ─── QUICKSTART ─── */
+    .quickstart-wrap {
+      background: var(--dark-bg);
+    }
+    .quickstart-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 72px 24px;
+    }
+    .quickstart-wrap .section-eyebrow { color: var(--code-highlight); }
+    .quickstart-wrap .section-title { color: var(--dark-text); }
+    .quickstart-wrap .section-desc { color: var(--dark-muted); }
+
+    .qs-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+    .qs-step {
+      background: var(--dark-surface);
+      border: 1px solid var(--dark-border);
+      border-radius: var(--radius);
+      padding: 22px;
+    }
+    .qs-num {
+      width: 26px;
+      height: 26px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 14px;
+      flex-shrink: 0;
+    }
+    .qs-title {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--dark-text);
+      margin-bottom: 6px;
+    }
+    .qs-desc {
+      font-size: 12px;
+      color: var(--dark-muted);
+      line-height: 1.6;
+    }
+    .qs-desc code {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 11px;
+      color: var(--code-highlight);
+      background: rgba(245, 196, 160, 0.12);
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+
+    .code-block {
+      background: #0F0E0D;
+      border: 1px solid var(--dark-border);
+      border-radius: var(--radius);
+      padding: 28px 28px;
+      font-family: 'SF Mono', 'Fira Code', 'Fira Mono', monospace;
+      font-size: 12.5px;
+      line-height: 2;
+      color: #C4B4A8;
+      overflow-x: auto;
+      white-space: pre;
+    }
+    .c { color: #4A3C34; }
+    .k { color: var(--code-highlight); }
+    .s { color: var(--code-skill); }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 32px 24px;
+    }
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-left {
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+    .footer-left a {
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+    .footer-left a:hover { color: var(--accent); }
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+    .footer-links a {
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .footer-links a:hover { color: var(--accent); }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 700px) {
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+      .stat:nth-child(2) { border-right: none; }
+      .stat:nth-child(3) { border-right: 1px solid var(--border); border-top: 1px solid var(--border); }
+      .stat:nth-child(4) { border-right: none; border-top: 1px solid var(--border); }
+      .hero h1 { font-size: 38px; }
+      .nav-link { display: none; }
+    }
+    @media (max-width: 480px) {
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .btn-primary, .btn-secondary { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-mark">C</div>
+      Founding with Claude
+    </a>
+    <div class="nav-right">
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#quickstart" class="nav-link">Quickstart</a>
+      <a href="https://github.com/sinned/found-with-claude" class="nav-cta" target="_blank" rel="noopener">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section class="hero">
+  <div class="hero-eyebrow">
+    <div class="hero-eyebrow-dot"></div>
+    Claude Skills Pack · 13 skills
+  </div>
+  <h1>From <em>idea</em> to<br>Demo Day.</h1>
+  <p class="hero-sub">
+    Structured Claude Skills for every phase of the founder journey. Not just the coding phase.
+  </p>
+  <div class="hero-actions">
+    <a href="https://github.com/sinned/found-with-claude" class="btn-primary" target="_blank" rel="noopener">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+      Clone the repo
+    </a>
+    <a href="#skills" class="btn-secondary">Browse all 13 skills →</a>
+  </div>
+</section>
+
+<!-- ─── STATS BAR ─── -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat">
+      <div class="stat-number">13</div>
+      <div class="stat-label">founder skills</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">12</div>
+      <div class="stat-label">weeks covered</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">~10m</div>
+      <div class="stat-label">input per skill</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">0</div>
+      <div class="stat-label">API keys needed</div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── THE LOOP ─── -->
+<div class="section">
+  <div class="section-eyebrow">The founder learning loop</div>
+  <h2 class="section-title">Every phase. One skill.</h2>
+  <p class="section-desc">Most AI tools for founders start at prototyping. Founders start with uncertainty. This pack covers the whole loop.</p>
+
+  <div class="loop-box">
+    <div class="loop-nodes">
+      <div class="loop-node">Problem</div><div class="loop-arr">→</div>
+      <div class="loop-node">Customers</div><div class="loop-arr">→</div>
+      <div class="loop-node">Synthesis</div><div class="loop-arr">→</div>
+      <div class="loop-node">Strategy</div><div class="loop-arr">→</div>
+      <div class="loop-node">Prototype</div><div class="loop-arr">→</div>
+      <div class="loop-node">Users</div><div class="loop-arr">→</div>
+      <div class="loop-node">PMF</div><div class="loop-arr">→</div>
+      <div class="loop-node">Growth</div><div class="loop-arr">→</div>
+      <div class="loop-node">Hire</div><div class="loop-arr">→</div>
+      <div class="loop-node">Raise</div><div class="loop-arr">→</div>
+      <div class="loop-node">Demo Day</div>
+    </div>
+    <div class="loop-return">
+      <div class="loop-return-line"></div>
+      <div class="loop-return-label">← What did we learn?</div>
+      <div class="loop-return-line"></div>
+    </div>
+  </div>
+
+  <div class="principles-grid">
+    <div class="principle-card">
+      <div class="principle-icon">⚡</div>
+      <div class="principle-title">10 minutes in, structured output out</div>
+      <div class="principle-desc">Drop your raw notes, transcripts, or data. Each skill knows what to look for and what to produce. No cleanup needed.</div>
+    </div>
+    <div class="principle-card">
+      <div class="principle-icon">🔗</div>
+      <div class="principle-title">Each skill's output is the next one's input</div>
+      <div class="principle-desc">Run them in sequence for the full 12-week journey, or jump in at whatever phase you're already past.</div>
+    </div>
+    <div class="principle-card">
+      <div class="principle-icon">🔁</div>
+      <div class="principle-title">Run skills multiple times</div>
+      <div class="principle-desc">Run <code>/founder-opportunity-map</code> before customer calls and again after. The difference between runs is what you learned.</div>
+    </div>
+    <div class="principle-card">
+      <div class="principle-icon">🎯</div>
+      <div class="principle-title">Opinionated, not open-ended</div>
+      <div class="principle-desc">Structured workflows, not chatbot prompts. Each skill has a specific output format, a defined input, and clear success criteria.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ─── SKILLS ─── -->
+<div id="skills" class="section">
+  <div class="section-eyebrow">All 13 skills</div>
+  <h2 class="section-title">The full skill map</h2>
+  <p class="section-desc">Organized by phase. Each skill answers one urgent founder question and produces one structured artifact.</p>
+
+  <!-- Week 1 -->
+  <div class="phase-group">
+    <div class="phase-header">
+      <span class="phase-pill">Week 1</span>
+      <span class="phase-name">Find a Problem</span>
+      <span class="phase-q">— Is this pain real and underserved?</span>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-cmd">/founder-opportunity-map</div>
+        <div class="skill-title">Opportunity Map</div>
+        <div class="skill-desc">Map and rank potential startup opportunities from your hunches, domain knowledge, and observations. Produces a scored opportunity memo.</div>
+        <div class="skill-io">
+          <div class="io-row"><span class="io-label">In</span><span class="io-value">Background, domain expertise, messy notes</span></div>
+          <div class="io-row"><span class="io-label">Out</span><span class="io-value">Ranked memo: 3–6 areas scored on pain, underservice, and founder fit</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Week 2 -->
+  <div class="phase-group">
+    <div class="phase-header">
+      <span class="phase-pill">Week 2</span>
+      <span class="phase-name">Customer Discovery</span>
+      <span class="phase-q">— Who has it and what do they say?</span>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-cmd">/customer-discovery-synthesizer</div>
+        <div class="skill-title">Discovery Synthesizer</div>
+        <div class="skill-desc">Synthesize raw interview notes and transcripts into structured insight — patterns, jobs-to-be-done, quotes, and open questions. Works from 2+ interviews.</div>
+        <div class="skill-io">
+          <div class="io-row"><span class="io-label">In</span><span class="io-value">Raw interview notes, transcripts, voice memo summaries</span></div>
+          <div class="io-row"><span class="io-label">Out</span><span class="io-value">Patterns, JTBD, riskiest assumption, open questions</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Week 3 -->
+  <div class="phase-group">
+    <div class="phase-header">
+      <span class="phase-pill">Week 3</span>
+      <span class="phase-name">Customer Simulation</span>
+      <span class="phase-q">— What would real users say about this?</span>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-cmd">/synthetic-customer-panel</div>
+        <div class="skill-title">Synthetic Customer Panel</div>
+        <div class="skill-desc">Simulate 4–6 customer archetype reactions to your concept before you build anything. A thinking tool for stress-testing ideas. Not a research substitute.</div>
+        <div class="skill-io">
+          <div class="io-row"><span class="io-label">In</span><span class="io-value">Customer synthesis + concept to test</span></div>
+          <div class="io-row"><span class="io-label">Out</span><span class="io-value">Archetype reactions, cross-panel analysis, hypotheses to test</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Week 4 -->
+  <div class="phase-group">
+    <div class="phase-header">
+      <span class="phase-pill">Week 4</span>
+      <span class="phase-name">Product Strategy</span>
+      <span class="phase-q">— What do we build and why?</span>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-cmd">/product-strategy-brief</div>
+        <div class="skill-title">Product Strategy Brief</div>
+        <div class="skill-desc">Synthesize all discovery work into a one-page build decision: target customer, core problem, solution hypothesis, key bets, and what's explicitly out of scope.</div>
+        <div class="skill-io">
+          <div class="io-row"><span class="io-label">In</span><span class="io-value">Opportunity memo + customer synthesis + panel output</span></div>
+          <div class="io-row"><span class="io-label">Out</span><span class="io-value">One-page brief: target, problem, hypothesis, bets, out-of-scope</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Week 5 -->
+  <div class="phase-group">
+    <div class="phase-header">
+      <span class="phase-pill">Week 5</span>
+      <span class="phase-name">Prototype</span>
+      <span class="phase-q">— Can we build a working version in a week?</span>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-cmd">/prototype-scope</div>
+        <div class="skill-title">Prototype Scope</div>
+        <div class="skill-desc">Define exactly what to build, what success looks like, and how to hand off to the build environment. Keeps scope to one job in one week.</div>
+        <div class="skill-io">
+          <div class="io-row"><span class="io-label">In</span><span class="io-value">Product strategy brief</span></div>
+          <div class="io-row"><span class="io-label">Out</span><span class="io-value">Scope doc, success criteria, readiness checklist, build handoff</span></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-cmd">/prototype-review</div>
+        <div class="skill-title">Prototype Review</div>
+        <div class="skill-desc">Evaluate the built prototype against the original strategy. Produces an honest verdict with next steps: Proven / Disproven / Inconclusive / Blocked.</div>
+        <div class="skill-io">
+          <div class="io-row"><span class="io-label">In</span><span class="io-value">Prototype scope + product brief + what was actually built</span></div>
+          <div class="io-row"><span class="io-label">Out</span><span class="io-value">Honest verdict + next steps</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Week 6 -->
+  <div class="phase-group">
+    <div class="phase-header">
+      <span class="phase-pill">Week 6</span>
+      <span class="phase-name">First Users</span>
+      <span class="phase-q">— Who are the first 10 users and how do we reach them?</span>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-cmd">/first-users-outreach</div>
+        <div class="skill-title">First Users Outreach</div>
+        <div class="skill-desc">Plan and write outreach to get the first 10 users — warm, referral, and cold sequences with a feedback capture template built in.</div>
+        <div class="skill-io">
+          <div class="io-row"><span class="io-label">In</span><span class="io-value">Product brief + prototype description</span></div>
+          <div class="io-row"><span class="io-label">Out</span><span class="io-value">Outreach sequence + onboarding ask + feedback capture guide</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Week 7 -->
+  <div class="phase-group">
+    <div class="phase-header">
+      <span class="phase-pill">Week 7</span>
+      <span class="phase-name">PMF Sprint</span>
+      <span class="phase-q">— Are we seeing the signals that matter?</span>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-cmd">/pmf-signal-review</div>
+        <div class="skill-title">PMF Signal Review</div>
+        <div class="skill-desc">Analyze product-market fit signals from early user data, feedback, and behavior. Returns a clear verdict and concrete next steps. Needs 10+ users.</div>
+        <div class="skill-io">
+          <div class="io-row"><span class="io-label">In</span><span class="io-value">User data, feedback, retention signals, qualitative observations</span></div>
+          <div class="io-row"><span class="io-label">Out</span><span class="io-value">Signal memo with verdict: Strong / Mixed / Weak</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Week 8 -->
+  <div class="phase-group">
+    <div class="phase-header">
+      <span class="phase-pill">Week 8</span>
+      <span class="phase-name">Growth</span>
+      <span class="phase-q">— What lever do we pull next?</span>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-cmd">/growth-experiment-backlog</div>
+        <div class="skill-title">Growth Experiment Backlog</div>
+        <div class="skill-desc">Generate a prioritized backlog of growth experiments based on PMF signals and your current bottleneck. Each experiment includes a hypothesis, metric, and effort estimate.</div>
+        <div class="skill-io">
+          <div class="io-row"><span class="io-label">In</span><span class="io-value">PMF signal memo + current growth bottleneck</span></div>
+          <div class="io-row"><span class="io-label">Out</span><span class="io-value">3 experiments to run this week + full backlog with effort estimates</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Week 9 -->
+  <div class="phase-group">
+    <div class="phase-header">
+      <span class="phase-pill">Week 9</span>
+      <span class="phase-name">Hiring</span>
+      <span class="phase-q">— Who is the right first hire?</span>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-cmd">/founder-hiring-scorecard</div>
+        <div class="skill-title">Hiring Scorecard</div>
+        <div class="skill-desc">Create a structured hiring scorecard for an early-stage role — must-haves, nice-to-haves, red flags, and interview questions calibrated to your stage.</div>
+        <div class="skill-io">
+          <div class="io-row"><span class="io-label">In</span><span class="io-value">Role description + team context + what this hire must unlock</span></div>
+          <div class="io-row"><span class="io-label">Out</span><span class="io-value">Scorecard with criteria, red flags, interview questions</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Week 10 -->
+  <div class="phase-group">
+    <div class="phase-header">
+      <span class="phase-pill">Week 10</span>
+      <span class="phase-name">Fundraising</span>
+      <span class="phase-q">— What is the story investors need to hear?</span>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-cmd">/fundraising-narrative</div>
+        <div class="skill-title">Fundraising Narrative</div>
+        <div class="skill-desc">Build the investor story from real traction data. Produces an investor memo and objection map. Requires real traction — a narrative without traction is a hypothesis presentation.</div>
+        <div class="skill-io">
+          <div class="io-row"><span class="io-label">In</span><span class="io-value">Product brief + PMF signal review + traction data</span></div>
+          <div class="io-row"><span class="io-label">Out</span><span class="io-value">Investor memo + objection map</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Week 11 -->
+  <div class="phase-group">
+    <div class="phase-header">
+      <span class="phase-pill">Week 11</span>
+      <span class="phase-name">Demo Day</span>
+      <span class="phase-q">— Can we land this in 2 minutes on stage?</span>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-cmd">/demo-day-script</div>
+        <div class="skill-title">Demo Day Script</div>
+        <div class="skill-desc">Write a word-for-word 2-minute Demo Day pitch script: hook, problem, solution, traction, ask. Includes a timing guide and danger zones to avoid.</div>
+        <div class="skill-io">
+          <div class="io-row"><span class="io-label">In</span><span class="io-value">Fundraising narrative + live demo flow</span></div>
+          <div class="io-row"><span class="io-label">Out</span><span class="io-value">Word-for-word script + timing guide + danger zones</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Every Week -->
+  <div class="phase-group">
+    <div class="phase-header">
+      <span class="phase-pill">Every Week</span>
+      <span class="phase-name">Review</span>
+      <span class="phase-q">— What did we learn this week?</span>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-cmd">/weekly-founder-review</div>
+        <div class="skill-title">Weekly Founder Review</div>
+        <div class="skill-desc">The meta-skill that ties everything together. Run every Friday or Monday. Forces three questions: what was learned, what was done, and what is the single most important next step.</div>
+        <div class="skill-io">
+          <div class="io-row"><span class="io-label">In</span><span class="io-value">Wins, blocks, conversations, data, personal state</span></div>
+          <div class="io-row"><span class="io-label">Out</span><span class="io-value">Structured review + clear decision for next week</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── QUICKSTART ─── -->
+<div class="quickstart-wrap" id="quickstart">
+  <div class="quickstart-inner">
+    <div class="section-eyebrow">Get started</div>
+    <h2 class="section-title">Up and running in 4 steps.</h2>
+    <p class="section-desc">No API keys. No setup. No boilerplate. Just Claude Code and your raw founder material.</p>
+
+    <div class="qs-steps">
+      <div class="qs-step">
+        <div class="qs-num">1</div>
+        <div class="qs-title">Clone the repo</div>
+        <div class="qs-desc">Skills live in <code>.claude/skills/</code> and are auto-detected by Claude Code when you open the project.</div>
+      </div>
+      <div class="qs-step">
+        <div class="qs-num">2</div>
+        <div class="qs-title">Open Claude Code</div>
+        <div class="qs-desc">Run <code>claude</code> from the repo root. Skills load automatically from the project directory.</div>
+      </div>
+      <div class="qs-step">
+        <div class="qs-num">3</div>
+        <div class="qs-title">Drop your raw context</div>
+        <div class="qs-desc">Put your notes, transcripts, or ideas in <code>examples/founder-context.md</code>. No cleanup needed.</div>
+      </div>
+      <div class="qs-step">
+        <div class="qs-num">4</div>
+        <div class="qs-title">Invoke a skill</div>
+        <div class="qs-desc">Start at Week 1, or jump to wherever you are. Each skill takes ~10 minutes of rough input.</div>
+      </div>
+    </div>
+
+    <div class="code-block"><span class="c"># 1. Clone</span>
+<span class="k">git clone https://github.com/sinned/found-with-claude</span>
+<span class="k">cd found-with-claude</span>
+
+<span class="c"># 2. Open Claude Code</span>
+<span class="k">claude</span>
+
+<span class="c"># 3. Drop your raw context into examples/founder-context.md</span>
+
+<span class="c"># 4. Start at the beginning</span>
+<span class="s">/founder-opportunity-map</span>
+
+<span class="c"># Or jump to wherever you are</span>
+<span class="s">/customer-discovery-synthesizer</span>
+<span class="s">/product-strategy-brief</span>
+<span class="s">/weekly-founder-review</span></div>
+  </div>
+</div>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">
+      <strong>Founding with Claude</strong> — A Claude Skills pack by <a href="https://github.com/sinned">@sinned</a>. Built for founders, not just developers.
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/sinned/found-with-claude" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/sinned/found-with-claude/tree/main/.claude/skills" target="_blank" rel="noopener">Skills source</a>
+      <a href="https://claude.ai" target="_blank" rel="noopener">Claude</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
