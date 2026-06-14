@@ -1,0 +1,39 @@
+graph TD
+    subgraph "Problem & Customer"
+        A[/founder-opportunity-map/]
+        B[/customer-discovery-synthesizer/]
+        C[/synthetic-customer-panel/]
+    end
+
+    subgraph "Strategy & Build"
+        D[/product-strategy-brief/]
+        E[/prototype-scope/]
+        P[prototype-with-claude]
+        F[/prototype-review/]
+    end
+
+    subgraph "Users & Growth"
+        G[/first-users-outreach/]
+        H[/pmf-signal-review/]
+        I[/growth-experiment-backlog/]
+    end
+
+    subgraph "Team & Capital"
+        J[/founder-hiring-scorecard/]
+        K[/fundraising-narrative/]
+        L[/demo-day-script/]
+    end
+
+    subgraph "Meta"
+        M[/weekly-founder-review/]
+    end
+
+    A --> B --> C --> D --> E --> P --> F --> G --> H --> I
+    H --> K --> L
+    I --> J
+    M -.->|every week| A
+    M -.->|every week| H
+    M -.->|every week| L
+
+    style P fill:#50C878,color:#fff
+    style M fill:#E74C3C,color:#fff
