@@ -122,7 +122,7 @@ Total: ~15 hours of focused Claude Code time.
 
 Before opening `https://github.com/sinned/prototype-with-claude`:
 
-- [x] Product brief is written (`work/product-strategy-brief/product-brief-output.md`)
+- [x] Product brief is written (`work/[startup]/product-strategy-brief/product-brief-output.md`)
 - [x] Riskiest assumption is clearly stated: trust + source attribution
 - [x] The one job can be stated in one sentence ✓
 - [x] At least one real test case exists: founder's own Stripe account, known MRR

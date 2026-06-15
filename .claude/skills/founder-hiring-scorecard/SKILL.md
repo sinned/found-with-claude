@@ -47,7 +47,7 @@ first 90 days that no one on the current team can do?"
 
 7. **Write the scorecard** — Follow the output format below.
 
-8. **Save output** — Write to `work/founder-hiring-scorecard/hiring-scorecard-[role].md`.
+8. **Save output** — Write to `work/[startup]/founder-hiring-scorecard/hiring-scorecard-[role].md`.
 
 ## Output format
 

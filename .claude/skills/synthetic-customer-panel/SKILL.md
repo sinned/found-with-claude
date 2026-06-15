@@ -17,9 +17,9 @@ that the founder may not have considered.
 The founder needs to provide:
 1. **A concept to test** — A product idea, feature, pricing model, or positioning
 2. **Customer context** (use one of these sources):
-   - Output from `/customer-discovery-synthesizer` in `work/customer-discovery-synthesizer/customer-synthesis-output.md`
+   - Output from `/customer-discovery-synthesizer` in `work/[startup]/customer-discovery-synthesizer/customer-synthesis-output.md`
    - A description of the target customer in the current conversation
-   - `work/founder-opportunity-map/founder-context.md`
+   - `work/[startup]/founder-opportunity-map/founder-context.md`
 
 If the founder has not provided a clear concept, ask: "What exactly do you want to
 test? Describe it in 2-3 sentences as you would to a customer."
@@ -51,7 +51,7 @@ test? Describe it in 2-3 sentences as you would to a customer."
 
 8. **Write the panel report** — Follow the output format below.
 
-9. **Save output** — Write to `work/synthetic-customer-panel/synthetic-customer-panel-output.md`.
+9. **Save output** — Write to `work/[startup]/synthetic-customer-panel/synthetic-customer-panel-output.md`.
 
 ## Output format
 

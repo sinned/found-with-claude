@@ -27,7 +27,10 @@ structured workflow — not a chatbot conversation, but a repeatable founder pro
 
 ```
 .claude/skills/
-├── founder-opportunity-map/     → /founder-opportunity-map
+├── founder-opportunity-map/     → /new-startup
+
+# 4. Start at the beginning
+/founder-opportunity-map
 ├── customer-discovery-synthesizer/ → /customer-discovery-synthesizer
 ├── synthetic-customer-panel/    → /synthetic-customer-panel
 ├── product-strategy-brief/      → /product-strategy-brief
@@ -110,8 +113,8 @@ cd found-with-claude
 # 2. Open Claude Code
 claude
 
-# 3. Drop your raw context
-# Put your notes, transcripts, or ideas in work/founder-opportunity-map/founder-context.md
+# 3. Start a new startup workspace
+/new-startup
 
 # 4. Start at the beginning
 /founder-opportunity-map
@@ -131,11 +134,11 @@ No setup. No API keys. No boilerplate. Just open Claude Code and invoke a skill.
 ### Input: bring your raw material
 
 Every skill is designed to work from rough input. Drop your actual notes, transcripts,
-and data into the relevant `work/<skill>/` folder. You do not need to clean it up first.
+and data into the relevant `work/[startup]/[skill]/` folder. You do not need to clean it up first.
 
-- `work/founder-opportunity-map/founder-context.md` — who you are, what you are building, what you know
-- `work/founder-opportunity-map/messy-founder-notes.md` — raw notes from calls, walks, observations
-- `work/customer-discovery-synthesizer/customer-transcript-1.md` — interview transcripts verbatim
+- `work/[startup]/founder-opportunity-map/founder-context.md` — who you are, what you are building, what you know
+- `work/[startup]/founder-opportunity-map/messy-founder-notes.md` — raw notes from calls, walks, observations
+- `work/[startup]/customer-discovery-synthesizer/customer-transcript-1.md` — interview transcripts verbatim
 - Anything else you have: screenshots descriptions, competitor notes, user emails
 
 ### Invocation: just run the command
@@ -231,13 +234,16 @@ manage their investor updates.
 
 **Step 1 — Map the opportunity:**
 ```
+/new-startup
+
+# 4. Start at the beginning
 /founder-opportunity-map
 ```
 Output: ranked opportunity memo. Investor updates rank #2. Your #1 surprise: the
 real pain is not writing the update — it is synthesizing what actually happened.
 
 **Step 2 — Talk to founders:**
-You do 7 calls. Drop the transcripts in `work/customer-discovery-synthesizer/`. Run:
+You do 7 calls. Drop the transcripts in `work/[startup]/customer-discovery-synthesizer/`. Run:
 ```
 /customer-discovery-synthesizer
 ```
@@ -294,6 +300,9 @@ What makes this different:
 
 What to run:
 ```
+/new-startup
+
+# 4. Start at the beginning
 /founder-opportunity-map
 /customer-discovery-synthesizer
 /weekly-founder-review

@@ -31,8 +31,12 @@ under 200 chars. Naming: directory name, YAML `name:`, and slash command must al
 
 ## How to invoke skills
 
-Founders invoke skills with a slash command:
+New founder? Start here:
+```
+/new-startup
+```
 
+Then use the full skill sequence:
 ```
 /founder-opportunity-map
 /customer-discovery-synthesizer
@@ -49,22 +53,45 @@ Founders invoke skills with a slash command:
 /weekly-founder-review
 ```
 
-## Where to put raw material
+## Active startup — how to resolve paths
 
-The founder's work lives in `work/`, organized by skill:
-- `work/founder-opportunity-map/` — founder context, notes, opportunity memos
-- `work/customer-discovery-synthesizer/` — interview transcripts, synthesis output
-- `work/synthetic-customer-panel/` — panel outputs
-- `work/product-strategy-brief/` — product briefs
-- `work/prototype-scope/` — scope documents
-- `work/prototype-review/` — review outputs
-- `work/first-users-outreach/` — outreach plans
-- `work/pmf-signal-review/` — signal memos, raw data
-- `work/growth-experiment-backlog/` — experiment backlogs
-- `work/founder-hiring-scorecard/` — hiring scorecards
-- `work/fundraising-narrative/` — investor memos
-- `work/demo-day-script/` — scripts
-- `work/weekly-founder-review/` — weekly reviews
+Every founder's work lives in `work/startup-N/` where N is the startup number.
+
+**To find the current startup before reading or writing any file:**
+1. Read `work/.current` — the contents name the active startup directory (e.g., `startup-1`)
+2. If `work/.current` does not exist, scan `work/` for the highest `startup-N` directory
+3. If no startup directory exists, tell the founder to run `/new-startup` first
+
+**Path convention used in all SKILL.md files:**
+`work/[startup]/skill-name/filename.md`
+
+Resolve `[startup]` using the steps above before using any path. Never hardcode a
+startup number — always read `work/.current`.
+
+## Where work lives
+
+Each startup's work is organized by skill inside its directory:
+
+```
+work/
+  .current                        ← name of the active startup (e.g., "startup-1")
+  startup-1/
+    founder-opportunity-map/      ← founder context, notes, opportunity memos
+    customer-discovery-synthesizer/ ← interview transcripts, synthesis output
+    synthetic-customer-panel/     ← panel outputs
+    product-strategy-brief/       ← product briefs
+    prototype-scope/              ← scope documents
+    prototype-review/             ← review outputs
+    first-users-outreach/         ← outreach plans
+    pmf-signal-review/            ← signal memos, raw data
+    growth-experiment-backlog/    ← experiment backlogs
+    founder-hiring-scorecard/     ← hiring scorecards
+    fundraising-narrative/        ← investor memos
+    demo-day-script/              ← scripts
+    weekly-founder-review/        ← weekly reviews
+  startup-2/
+    ...
+```
 
 Drop raw input in the relevant skill folder. Skills are designed to work from rough input.
 

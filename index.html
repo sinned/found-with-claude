@@ -639,7 +639,7 @@
 <div class="stats-bar">
   <div class="stats-inner">
     <div class="stat">
-      <div class="stat-number">13</div>
+      <div class="stat-number">14</div>
       <div class="stat-label">founder skills</div>
     </div>
     <div class="stat">
@@ -712,9 +712,29 @@
 
 <!-- ─── SKILLS ─── -->
 <div id="skills" class="section">
-  <div class="section-eyebrow">All 13 skills</div>
+  <div class="section-eyebrow">14 skills total</div>
   <h2 class="section-title">The full skill map</h2>
   <p class="section-desc">Organized by phase. Each skill answers one urgent founder question and produces one structured artifact.</p>
+
+  <!-- Onboarding -->
+  <div class="phase-group">
+    <div class="phase-header">
+      <span class="phase-pill" style="background:#E8DDD4;color:#6B5C52;">Start here</span>
+      <span class="phase-name">New Startup</span>
+      <span class="phase-q">— Sets up your workspace and captures context</span>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-cmd">/new-startup</div>
+        <div class="skill-title">New Startup Onboarding</div>
+        <div class="skill-desc">Creates <code>work/startup-N/</code> with all skill folders, sets it as the active workspace, and asks 4 questions to capture your founder context.</div>
+        <div class="skill-io">
+          <div class="io-row"><span class="io-label">In</span><span class="io-value">Your answers to 4 onboarding questions</span></div>
+          <div class="io-row"><span class="io-label">Out</span><span class="io-value">Startup workspace + founder-context.md + suggested first skill</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Step 1 -->
   <div class="phase-group">
@@ -995,13 +1015,13 @@
       </div>
       <div class="qs-step">
         <div class="qs-num">3</div>
-        <div class="qs-title">Drop your raw context</div>
-        <div class="qs-desc">Put your notes, transcripts, or ideas in <code>work/founder-opportunity-map/founder-context.md</code>. No cleanup needed.</div>
+        <div class="qs-title">Run <code>/new-startup</code></div>
+        <div class="qs-desc">Creates your startup workspace in <code>work/startup-1/</code>, captures your context, and suggests the right first skill.</div>
       </div>
       <div class="qs-step">
         <div class="qs-num">4</div>
         <div class="qs-title">Invoke a skill</div>
-        <div class="qs-desc">Start at Step 1, or jump to wherever you are in the journey. Each skill takes ~10 minutes of rough input.</div>
+        <div class="qs-desc">Start at Step 1, or jump to wherever you are in the journey. Each skill reads from and writes to your startup's folder.</div>
       </div>
     </div>
 
@@ -1012,7 +1032,8 @@
 <span class="c"># 2. Open Claude Code</span>
 <span class="k">claude</span>
 
-<span class="c"># 3. Drop your raw context into work/founder-opportunity-map/founder-context.md</span>
+<span class="c"># 3. Start a new startup workspace</span>
+<span class="s">/new-startup</span>
 
 <span class="c"># 4. Start at the beginning</span>
 <span class="s">/founder-opportunity-map</span>
