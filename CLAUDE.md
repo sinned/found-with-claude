@@ -33,10 +33,15 @@ under 200 chars. Naming: directory name, YAML `name:`, and slash command must al
 
 New founder? Start here:
 ```
-/new-startup
+/new-startup   ← sets up your workspace
+/loop          ← runs autonomously from here; stops when it needs you
 ```
 
-Then use the full skill sequence:
+`/loop` chains all skills in sequence, running what it can and pausing with
+exact instructions when it needs real-world founder input (interviews, build,
+outreach, experiments). Drop the requested input and run `/loop` again to resume.
+
+Individual skills (invoke directly if you want to jump to a specific phase):
 ```
 /founder-opportunity-map
 /customer-discovery-synthesizer

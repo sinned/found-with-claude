@@ -639,7 +639,7 @@
 <div class="stats-bar">
   <div class="stats-inner">
     <div class="stat">
-      <div class="stat-number">14</div>
+      <div class="stat-number">15</div>
       <div class="stat-label">founder skills</div>
     </div>
     <div class="stat">
@@ -712,16 +712,16 @@
 
 <!-- ─── SKILLS ─── -->
 <div id="skills" class="section">
-  <div class="section-eyebrow">14 skills total</div>
+  <div class="section-eyebrow">15 skills total</div>
   <h2 class="section-title">The full skill map</h2>
-  <p class="section-desc">Organized by phase. Each skill answers one urgent founder question and produces one structured artifact.</p>
+  <p class="section-desc">Start with <code>/new-startup</code> then run <code>/loop</code> — it handles the rest, pausing only when it needs you.</p>
 
-  <!-- Onboarding -->
+  <!-- Onboarding + Loop -->
   <div class="phase-group">
     <div class="phase-header">
       <span class="phase-pill" style="background:#E8DDD4;color:#6B5C52;">Start here</span>
-      <span class="phase-name">New Startup</span>
-      <span class="phase-q">— Sets up your workspace and captures context</span>
+      <span class="phase-name">Setup &amp; Loop</span>
+      <span class="phase-q">— Run once, then let the loop drive</span>
     </div>
     <div class="skills-grid">
       <div class="skill-card">
@@ -731,6 +731,15 @@
         <div class="skill-io">
           <div class="io-row"><span class="io-label">In</span><span class="io-value">Your answers to 4 onboarding questions</span></div>
           <div class="io-row"><span class="io-label">Out</span><span class="io-value">Startup workspace + founder-context.md + suggested first skill</span></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-cmd">/loop</div>
+        <div class="skill-title">Autonomous Founder Loop</div>
+        <div class="skill-desc">Chains all skills in sequence. Runs autonomously until it hits a phase that needs real-world founder input — then stops, saves the block, and waits. Drop the input and run <code>/loop</code> again to resume.</div>
+        <div class="skill-io">
+          <div class="io-row"><span class="io-label">In</span><span class="io-value">loop-state.md (current position) + any new files you've dropped</span></div>
+          <div class="io-row"><span class="io-label">Out</span><span class="io-value">All skill outputs up to next block + updated loop-state.md</span></div>
         </div>
       </div>
     </div>
@@ -1020,8 +1029,8 @@
       </div>
       <div class="qs-step">
         <div class="qs-num">4</div>
-        <div class="qs-title">Invoke a skill</div>
-        <div class="qs-desc">Start at Step 1, or jump to wherever you are in the journey. Each skill reads from and writes to your startup's folder.</div>
+        <div class="qs-title">Run <code>/loop</code></div>
+        <div class="qs-desc">Chains all skills autonomously. Runs what it can, stops with exact instructions when it needs you, resumes where it left off when you drop the input.</div>
       </div>
     </div>
 
@@ -1035,12 +1044,12 @@
 <span class="c"># 3. Start a new startup workspace</span>
 <span class="s">/new-startup</span>
 
-<span class="c"># 4. Start at the beginning</span>
-<span class="s">/founder-opportunity-map</span>
+<span class="c"># 4. Let the loop run — it stops when it needs you</span>
+<span class="s">/loop</span>
 
-<span class="c"># Or jump to wherever you are</span>
+<span class="c"># Or invoke any skill directly</span>
+<span class="s">/founder-opportunity-map</span>
 <span class="s">/customer-discovery-synthesizer</span>
-<span class="s">/product-strategy-brief</span>
 <span class="s">/weekly-founder-review</span></div>
   </div>
 </div>
