@@ -1,36 +1,55 @@
 # found-with-claude
 
-A Claude Skills pack for founders building from idea to Demo Day.
+An autonomous loop for founders building from idea to Demo Day.
 
 ---
 
-Most AI coding demos start with code. Founders do not.
+Most AI coding tools start at code. Founders don't.
 
-Founders start with uncertainty:
-- Is this problem painful?
-- Who has it?
-- What are they doing today?
-- What should we build first?
-- What is the riskiest assumption?
-- How do we get the first users?
-- What signals tell us we are onto something?
+Founders start with uncertainty — is this problem real? Who has it? What should
+we build first? What are the signals that tell us it's working?
 
-This repo gives founders reusable Claude Skills for that entire journey.
+`found-with-claude` is a Claude Skills pack that covers the whole loop.
+Run `/loop` and it drives autonomously — synthesizing, analyzing, deciding —
+stopping only when it needs something only a founder can do: go talk to
+customers, build the prototype, do the outreach, run the experiments.
+
+Drop the result. Run `/loop` again. It picks up where it left off.
 
 ---
 
-## What this is
+## How it works
 
-A collection of 13 opinionated Claude Skills covering the full company-building loop.
-Clone it, open it in Claude Code, and invoke the skills directly. Each skill is a
-structured workflow — not a chatbot conversation, but a repeatable founder process.
+```
+/new-startup        ← sets up your workspace, captures initial context
+/loop               ← runs until it needs you, then stops with exact instructions
+                       drop the requested input, run /loop again to resume
+```
+
+The loop knows four natural pause points — where AI can't substitute for the founder:
+
+| Block | What the loop needs | What you do |
+|-------|--------------------|----|
+| Discovery | Customer interview transcripts | Talk to 5–10 people, drop notes |
+| Build | Prototype + user reactions | Build in prototype-with-claude, drop build-notes.md |
+| Outreach execution | Who responded and what they said | Do the outreach, drop outreach-results.md |
+| Experiment execution | What the experiments showed | Run the experiments, drop experiment-results.md |
+
+Everything else — opportunity mapping, synthesis, customer simulation, product
+strategy, prototype scoping, PMF analysis, growth backlog, fundraising narrative,
+Demo Day script — runs autonomously.
+
+---
+
+## The skills
+
+15 skills total. `/loop` orchestrates them. You can also invoke any skill directly.
 
 ```
 .claude/skills/
-├── founder-opportunity-map/     → /new-startup
-
-# 4. Start at the beginning
-/founder-opportunity-map
+├── new-startup/                 → /new-startup
+├── loop/                        → /loop
+├── founder-opportunity-map/     → /founder-opportunity-map
 ├── customer-discovery-synthesizer/ → /customer-discovery-synthesizer
 ├── synthetic-customer-panel/    → /synthetic-customer-panel
 ├── product-strategy-brief/      → /product-strategy-brief
@@ -78,8 +97,8 @@ Problem → Customers → Synthesis → Strategy → Prototype → Users → PMF
    └───────────────────────────── What did we learn? ─────────────────────────────────────────────┘
 ```
 
-Each phase has an urgent question. Each question has a skill. The skills are designed
-to be fast: 10 minutes of input, structured output you can act on the same day.
+`/loop` runs this. The skills are the mechanism. The loop state file tracks where
+you are. When the loop needs the founder, it says exactly what, where, and how much.
 
 ---
 
@@ -87,6 +106,8 @@ to be fast: 10 minutes of input, structured output you can act on the same day.
 
 | Phase | Question | Skill |
 |-------|----------|-------|
+| Setup | — | `/new-startup` |
+| **Orchestration** | **What should run next?** | **`/loop`** |
 | Find a problem | Is this pain real and underserved? | `/founder-opportunity-map` |
 | Customer discovery | Who has it and what do they say? | `/customer-discovery-synthesizer` |
 | Customer simulation | What would real users say about this idea? | `/synthetic-customer-panel` |
@@ -99,7 +120,7 @@ to be fast: 10 minutes of input, structured output you can act on the same day.
 | Hiring | Who is the right first hire? | `/founder-hiring-scorecard` |
 | Fundraising | What is the story investors need to hear? | `/fundraising-narrative` |
 | Demo Day | Can we land this in 2 minutes on stage? | `/demo-day-script` |
-| Weekly | What did we learn this week? | `/weekly-founder-review` |
+| Weekly | What did we learn? | `/weekly-founder-review` |
 
 ---
 
@@ -113,238 +134,130 @@ cd found-with-claude
 # 2. Open Claude Code
 claude
 
-# 3. Start a new startup workspace
+# 3. Set up your startup workspace
 /new-startup
 
-# 4. Start at the beginning
-/founder-opportunity-map
-
-# Or jump to wherever you are in the journey
-/customer-discovery-synthesizer
-/product-strategy-brief
-/weekly-founder-review
+# 4. Let the loop run
+/loop
+# → runs autonomously until it needs you
+# → tells you exactly what to do when it stops
+# → drop the input, run /loop again to resume
 ```
 
-No setup. No API keys. No boilerplate. Just open Claude Code and invoke a skill.
+No setup. No API keys. No boilerplate.
 
 ---
 
-## How to use the skills
+## How the loop stops
 
-### Input: bring your raw material
-
-Every skill is designed to work from rough input. Drop your actual notes, transcripts,
-and data into the relevant `work/[startup]/[skill]/` folder. You do not need to clean it up first.
-
-- `work/[startup]/founder-opportunity-map/founder-context.md` — who you are, what you are building, what you know
-- `work/[startup]/founder-opportunity-map/messy-founder-notes.md` — raw notes from calls, walks, observations
-- `work/[startup]/customer-discovery-synthesizer/customer-transcript-1.md` — interview transcripts verbatim
-- Anything else you have: screenshots descriptions, competitor notes, user emails
-
-### Invocation: just run the command
+When `/loop` hits a phase it can't run without you, it outputs a block report:
 
 ```
-/customer-discovery-synthesizer
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⏸  LOOP PAUSED — founder input needed
+
+Phase completed in this run:
+  ✅ opportunity-map
+  ✅ (awaiting your interviews)
+
+Paused at: discovery
+
+What the loop needs:
+  Customer interview transcripts — raw notes are fine
+
+Where to put them:
+  work/startup-1/customer-discovery-synthesizer/customer-transcript-N.md
+
+What "enough" looks like:
+  At least 3 files (more = better synthesis)
+
+To resume:
+  1. Do 5–10 customer calls
+  2. Drop your notes at the path above
+  3. Run /loop
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
-Claude will find your transcripts, synthesize them, and produce structured output.
-The skill tells Claude exactly what to look for and what to produce.
-
-### Output: structured documents you can act on
-
-Each skill produces a specific artifact: a memo, a brief, a scorecard, a script.
-Outputs are saved in the repo so you can reference them across skills.
-
-### Iteration: run skills multiple times
-
-Run `/founder-opportunity-map` before talking to customers. Run it again after.
-The second output is almost always different. That difference is what you learned.
+The loop state is saved in `work/[startup]/loop-state.md` between runs.
 
 ---
 
-## The idea-to-Demo-Day journey
+## Work is organized by startup
 
-See `journeys/` for worked examples. The full arc:
+Each startup gets its own workspace:
 
-| Step | Focus | Primary skill |
-|------|-------|---------------|
-| 1 | Find a problem | `/founder-opportunity-map` |
-| 2 | Customer discovery | `/customer-discovery-synthesizer` |
-| 3 | Customer simulation | `/synthetic-customer-panel` |
-| 4 | Product strategy | `/product-strategy-brief` |
-| 5 | Build prototype | `/prototype-scope` → `prototype-with-claude` |
-| 6 | First users | `/first-users-outreach` |
-| 7 | PMF sprint | `/pmf-signal-review` |
-| 8 | Growth | `/growth-experiment-backlog` |
-| 9 | Hiring | `/founder-hiring-scorecard` |
-| 10 | Fundraising | `/fundraising-narrative` |
-| 11 | Demo Day | `/demo-day-script` |
-| Ongoing | Review | `/weekly-founder-review` |
+```
+work/
+  .current            ← active startup name (e.g., "startup-1")
+  startup-1/
+    loop-state.md     ← where the loop is, what it's waiting for
+    founder-opportunity-map/
+    customer-discovery-synthesizer/
+    ...all 13 skill folders
+  startup-2/
+    ...
+```
+
+Run `/new-startup` to create a new one. `work/.current` tracks which is active.
+All skills and `/loop` read `work/.current` automatically.
 
 ---
 
 ## Where gstack fits
 
-[gstack](https://github.com/garrytan/gstack) (by Garry Tan, YC President & CEO) is a
-global Claude Code skills pack for the engineering sprint: plan, build, review, QA,
-ship. It installs once to `~/.claude/skills/gstack/` and works in any repo.
+[gstack](https://github.com/garrytan/gstack) is a global Claude Code skills pack
+for the engineering sprint: plan, build, review, QA, ship.
 
-**The handoff:** `/prototype-scope` (here) defines what to build. gstack's `/office-hours`
-and `/autoplan` plan it. `/review`, `/qa`, `/ship` build and ship it. `/prototype-review`
-(here) evaluates the result.
+**The handoff:** `/prototype-scope` (here) defines what to build. gstack's
+`/office-hours` and `/autoplan` plan it. `/review`, `/qa`, `/ship` ship it.
+`/prototype-review` (here) evaluates the result. `/loop` orchestrates all of it.
 
-gstack and `found-with-claude` are complementary — gstack lives inside the build
-sprint, this repo covers everything around it.
-
-See `docs/gstack-integration.md` for the full integration guide, including how to
-pass context from `/prototype-scope` into gstack's `/office-hours`, how to combine
-the weekly `/retro` and `/weekly-founder-review`, and when to use gstack vs.
-`prototype-with-claude` for prototyping AI features.
+See `docs/gstack-integration.md` for details.
 
 ---
 
 ## Where `prototype-with-claude` fits
 
-This repo covers the full founder journey. The sibling repo `https://github.com/sinned/prototype-with-claude`
+The sibling repo [`prototype-with-claude`](https://github.com/sinned/prototype-with-claude)
 is the dedicated build environment for the prototyping step.
 
-**What `prototype-with-claude` does:**
-- Teaches the Write SKILL.md → eval → improve → export to production Python workflow
-- Provides built-in skills: `/qualify-lead`, `/research-agent`, `/generate-content`
-- Shows how to graduate a working Claude behavior to production via the Agent SDK
-- Demonstrates the three skill patterns: Research & Synthesize, Score & Classify, Generate & Iterate
-
-**How it connects to this repo:**
+**How it connects:**
 1. `/prototype-scope` (here) → defines what to build
-2. Open `https://github.com/sinned/prototype-with-claude` → build it using Claude Skills
-3. `/prototype-review` (here) → evaluate the result against the original strategy
-
-The prototyping sprint is where you build the AI behavior your product depends on.
-`prototype-with-claude` is how you do that without writing SDK code before the
-behavior is validated.
-
-See `docs/prototype-with-claude-integration.md` for the full integration context.
-
----
-
-## Example workflow
-
-You are a founder who suspects there is a pain around how early-stage startups
-manage their investor updates.
-
-**Step 1 — Map the opportunity:**
-```
-/new-startup
-
-# 4. Start at the beginning
-/founder-opportunity-map
-```
-Output: ranked opportunity memo. Investor updates rank #2. Your #1 surprise: the
-real pain is not writing the update — it is synthesizing what actually happened.
-
-**Step 2 — Talk to founders:**
-You do 7 calls. Drop the transcripts in `work/[startup]/customer-discovery-synthesizer/`. Run:
-```
-/customer-discovery-synthesizer
-```
-Output: synthesis across 7 interviews. Clear pattern: founders spend 3-4 hours
-pulling together data that lives in 6 different tools before they can write a word.
-
-**Step 3 — Stress-test the concept:**
-```
-/synthetic-customer-panel
-```
-Output: 5 founder archetypes react to your proposed concept. Two archetypes say
-they would use it. Three say they already have a workaround.
-
-**Step 4 — Write the strategy:**
-```
-/product-strategy-brief
-```
-Output: one-page brief. Target: seed-stage founders with 10-20 investors. Core bet:
-auto-pull data from Stripe, Linear, and bank accounts. The brief reveals your
-riskiest assumption: founders trust AI-generated numbers in investor-facing docs.
-
-**Step 5 — Build:**
-```
-/prototype-scope
-```
-Output: scope document. One job. Open `https://github.com/sinned/prototype-with-claude`. Build it.
-
-**Step 6 — Get users:**
-```
-/first-users-outreach
-```
-Output: outreach sequence targeting founders in your network. First 10 users found
-in 5 days.
+2. Open `https://github.com/sinned/prototype-with-claude` → build and eval the AI behavior
+3. Drop `build-notes.md` in `work/[startup]/prototype-review/`
+4. Run `/loop` → resumes with `/prototype-review` automatically
 
 ---
 
 ## For Anthropic reviewers
 
-This repo is the `found-with-claude` companion to `prototype-with-claude`.
-
 Where to look:
-- `CLAUDE.md` — project-level instructions for Claude Code
-- `.claude/skills/` — the 13 founder skills (these are the primary artifact)
+- `CLAUDE.md` — project instructions for Claude Code (includes path resolution logic)
+- `.claude/skills/loop/SKILL.md` — the autonomous orchestrator
+- `.claude/skills/` — all 15 skills
+- `work/startup-1/loop-state.md` — example loop state
+- `work/startup-1/customer-discovery-synthesizer/` — 10 sample interview transcripts
 - `docs/founder-journey-map.md` — how the skills connect
-- `docs/prototype-with-claude-integration.md` — integration with the sibling repo
-- `journeys/week-01-find-a-problem.md` — worked example of Step 1
-- `work/` — founder work organized by skill
-
-What makes this different:
-- Skills cover the full company-building loop, not just the coding phase
-- Each skill is opinionated and structured, not open-ended
-- The skills are designed to work from rough founder input
-- The weekly review is a meta-skill that ties everything together
 
 What to run:
 ```
 /new-startup
-
-# 4. Start at the beginning
-/founder-opportunity-map
-/customer-discovery-synthesizer
-/weekly-founder-review
+/loop
 ```
 
----
-
-## Why this is more than DevRel
-
-The standard "AI for founders" narrative: use AI to write code faster.
-
-The problem with that narrative: most founding failures are not caused by slow coding.
-They are caused by building the wrong thing, talking to the wrong customers, writing
-the wrong pitch, or hiring the wrong person.
-
-Claude is not just a code accelerator. It is a thinking partner for the full
-founder job. The skills in this repo are designed to compress the learning loop,
-not the coding loop.
-
-When a founder runs `/customer-discovery-synthesizer` after 7 customer calls, they
-get a structured synthesis in minutes instead of days. When they run
-`/synthetic-customer-panel`, they find out which objections they have not answered
-before they build anything. When they run `/weekly-founder-review`, they leave
-Friday with a clear decision about what matters most next week.
-
-This is what "Claude for founders" actually means: compress every phase of the
-company-building loop, not just the prototyping phase.
+What makes this different:
+- `/loop` runs the full journey autonomously, not just individual skills
+- Stops at the four phases where AI can't substitute for founder work
+- Loop state persists between runs so it resumes exactly where it left off
+- Each startup gets its own workspace; multiple startups can coexist
 
 ---
 
-## The broader "Claude for…" idea
-
-`found-with-claude` is one instance of a pattern:
+## The broader "Claude for…" pattern
 
 - `prototype-with-claude` → Claude for AI feature prototyping
-- `found-with-claude` → Claude for company building
-- (future) `investing-with-claude` → Claude for sourcing, diligence, and portfolio ops
-- (future) `research-with-claude` → Claude for academic research workflows
+- `found-with-claude` → Claude for company building, idea to Demo Day
+- (future) `investing-with-claude` → Claude for sourcing, diligence, portfolio ops
 
-Each repo is a self-contained Claude Skills pack for a specific professional context.
-Each one turns Claude Code from a coding assistant into a workflow accelerator for
-the entire job — not just the parts that involve writing code.
-
-The pattern works because Claude Code skills are just plain-text job descriptions.
-Any workflow that can be described clearly can be a skill.
+Each is a self-contained Claude Skills pack for a professional context — turning
+Claude Code from a coding assistant into a workflow accelerator for the whole job.
