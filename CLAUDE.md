@@ -75,30 +75,74 @@ startup number — always read `work/.current`.
 
 ## Where work lives
 
-Each startup's work is organized by skill inside its directory:
+Each startup's work is organized by the company's knowledge corpus — not by skill:
 
 ```
 work/
-  .current                        ← name of the active startup (e.g., "startup-1")
+  .current          ← name of the active startup (e.g., "startup-1")
   startup-1/
-    founder-opportunity-map/      ← founder context, notes, opportunity memos
-    customer-discovery-synthesizer/ ← interview transcripts, synthesis output
-    synthetic-customer-panel/     ← panel outputs
-    product-strategy-brief/       ← product briefs
-    prototype-scope/              ← scope documents
-    prototype-review/             ← review outputs
-    first-users-outreach/         ← outreach plans
-    pmf-signal-review/            ← signal memos, raw data
-    growth-experiment-backlog/    ← experiment backlogs
-    founder-hiring-scorecard/     ← hiring scorecards
-    fundraising-narrative/        ← investor memos
-    demo-day-script/              ← scripts
-    weekly-founder-review/        ← weekly reviews
+    opportunity/    ← problem space, market analysis, founder context and notes
+    customers/      ← interview transcripts, synthesis, simulated customer panels
+    product/        ← strategy brief, prototype scope, build notes, prototype review
+    traction/       ← outreach plans, first users, PMF signals, growth experiments
+    team/           ← hiring scorecards, role definitions
+    pitch/          ← fundraising narrative, demo day script
+    ops/            ← weekly reviews, loop state
   startup-2/
     ...
 ```
 
-Drop raw input in the relevant skill folder. Skills are designed to work from rough input.
+Drop raw input in the most relevant folder. Skills look for input and write output
+to the appropriate corpus folder (not the skill's own folder). Skills are designed
+to work from rough input.
+
+## The knowledge store
+
+Every skill run produces two things:
+
+1. A **working document** in `work/[startup]/[skill]/` — the full output for human review
+2. **Knowledge entities** in `knowledge/[startup]/[type]/` — curated facts that accumulate over time
+
+The knowledge store is the growing memory of this startup. It is structured for future
+export to an external durable knowledge store (vector DB, document store, or API). The
+schema and entity types are documented in `knowledge/README.md`.
+
+### Knowledge store path convention
+
+`knowledge/[startup]/[type]/[slug].md`
+
+Resolve `[startup]` the same way as `work/` paths (read `work/.current`). The `[type]` is
+one of: `insights`, `problems`, `customers`, `assumptions`, `decisions`, `signals`,
+`experiments`, `people`.
+
+### When to write to the knowledge store
+
+After every skill run, extract the most important knowledge and write it here. Not a
+summary of the output — the curated facts worth remembering across many future runs.
+
+Write a knowledge entity when:
+- A pattern appeared in 2+ interviews (→ `insight`)
+- A specific pain point is identified with evidence (→ `problem`)
+- A customer segment is defined in enough detail to build from (→ `customer`)
+- An assumption is made explicit and should be tracked (→ `assumption`)
+- A product or strategy decision is made (→ `decision`)
+- A PMF signal is observed (→ `signal`)
+- A growth experiment completes (→ `experiment`)
+
+**Do not write:** vague claims, full output summaries (that is what `work/` is for),
+or anything that will be overwritten on the next run.
+
+### When to read from the knowledge store
+
+When a skill needs context from prior runs — especially for synthesis skills that build
+on prior research — read from `knowledge/[startup]/[type]/` in addition to the prior
+output documents. See `knowledge/README.md` for which types each skill should read.
+
+### The future transition
+
+When this repo migrates to an external durable store, skill instructions change from
+"write to knowledge/[startup]/[type]/[slug].md" to "POST to the knowledge API."
+The entity schema (frontmatter + body format) stays the same. Only the transport changes.
 
 ## The prototyping handoff
 

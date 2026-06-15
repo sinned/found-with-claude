@@ -62,16 +62,16 @@ No setup. No API keys. No boilerplate. Just open Claude Code and invoke a skill.
 ### Input: bring your raw material
 
 Every skill works from rough input. Drop your actual notes, transcripts, and data
-into `work/[startup]/[skill]/`. No cleanup needed.
+into the relevant corpus folder. No cleanup needed.
 
-- `work/[startup]/founder-opportunity-map/founder-context.md` — who you are, what you know
-- `work/[startup]/founder-opportunity-map/messy-founder-notes.md` — raw observations
-- `work/[startup]/customer-discovery-synthesizer/customer-transcript-1.md` — interview transcripts
+- `work/[startup]/opportunity/founder-context.md` — who you are, what you know
+- `work/[startup]/opportunity/founder-notes.md` — raw observations
+- `work/[startup]/customers/customer-transcript-1.md` — interview transcripts
 
 ### Output: structured artifacts, not chat
 
 Each skill produces a specific document: a memo, a brief, a scorecard, a script.
-Outputs are saved in `work/[startup]/[skill]/` so they feed directly into the next skill.
+Outputs are saved in the relevant corpus folder so they feed directly into the next skill.
 
 ### Chain: each output is the next skill's input
 
@@ -98,16 +98,25 @@ The difference between runs is what you learned.
 
 ```
 work/
-  .current              ← active startup (e.g., "startup-1")
+  .current          ← active startup (e.g., "startup-1")
   startup-1/
-    founder-opportunity-map/
-    customer-discovery-synthesizer/
-    ...all 13 skill folders
+    opportunity/    ← problem space, market analysis, founder context
+    customers/      ← interview transcripts, synthesis, simulated panels
+    product/        ← strategy brief, prototype scope, build evidence
+    traction/       ← outreach, PMF signals, experiments
+    team/           ← hiring scorecards
+    pitch/          ← fundraising narrative, demo day script
+    ops/            ← weekly reviews, loop state
   startup-2/
     ...
 ```
 
-Run `/new-startup` to create a workspace. `work/.current` tracks which is active.
+Organized by knowledge corpus — not by skill. Every skill reads from and writes to
+the appropriate folder. Run `/new-startup` to create a workspace. `work/.current` tracks
+which is active.
+
+The knowledge store at `knowledge/[startup]/` accumulates structured facts as skills run —
+designed for future export to an external durable store.
 
 ---
 

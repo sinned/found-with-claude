@@ -23,7 +23,7 @@ The founder should bring whatever happened this week:
 - Product or prototype updates
 - Personal state (burned out? energized? uncertain?)
 
-Drop it all in the current conversation or in `work/[startup]/founder-opportunity-map/messy-founder-notes.md`.
+Drop it all in the current conversation or in `work/[startup]/opportunity/founder-notes.md`.
 The more raw the input, the better the synthesis.
 
 Also look for:
@@ -61,7 +61,7 @@ Also look for:
 
 9. **Write the review** — Follow the output format below.
 
-10. **Save output** — Write to `work/[startup]/weekly-founder-review/weekly-review-[date].md`.
+10. **Save output** — Write to `work/[startup]/ops/weekly-review-[date].md`.
 
 ## Output format
 

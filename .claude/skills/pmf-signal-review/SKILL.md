@@ -19,7 +19,7 @@ Bring whatever you have — not all of these are required:
 - Qualitative observations from watching users
 - Your own intuition about what is working
 
-Put raw data in `work/[startup]/pmf-signal-review/` or share it in the current conversation.
+Put raw data in `work/[startup]/traction/` or share it in the current conversation.
 
 If you have fewer than 5 users: note this, produce the memo with the available
 signals, and recommend getting to 10+ before drawing strong conclusions.
@@ -56,7 +56,7 @@ signals, and recommend getting to 10+ before drawing strong conclusions.
 
 8. **Write the memo** — Follow the output format below.
 
-9. **Save output** — Write to `work/[startup]/pmf-signal-review/pmf-signal-review-output.md`.
+9. **Save output** — Write to `work/[startup]/traction/pmf-signals.md`.
 
 ## Output format
 

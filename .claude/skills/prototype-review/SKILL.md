@@ -12,8 +12,8 @@ did the prototype test what it was supposed to test, and what did we learn?
 ## Input
 
 Look for:
-- `work/[startup]/prototype-scope/prototype-scope-output.md` — from `/prototype-scope`
-- `work/[startup]/product-strategy-brief/product-brief-output.md` — from `/product-strategy-brief`
+- `work/[startup]/product/prototype-scope.md` — from `/prototype-scope`
+- `work/[startup]/product/strategy-brief.md` — from `/product-strategy-brief`
 - Evidence of what was built (one of these):
   - Output files from the prototype itself
   - A description of what was built from the founder
@@ -57,7 +57,7 @@ you have something to show. If you have not started building, run `/prototype-sc
 
 8. **Write the review** — Follow the output format below.
 
-9. **Save output** — Write to `work/[startup]/prototype-review/prototype-review-output.md`.
+9. **Save output** — Write to `work/[startup]/product/prototype-review.md`.
 
 ## Output format
 

@@ -19,7 +19,7 @@ founder knows what to do and the loop knows when to resume.
 
 1. Read `work/.current` to get the active startup (e.g., `startup-1`)
 2. Set `STARTUP = work/[startup]` — use this prefix for all paths below
-3. Read `STARTUP/loop-state.md` if it exists. If not, this is the first run — create it.
+3. Read `STARTUP/ops/loop-state.md` if it exists. If not, this is the first run — create it.
 
 ---
 
@@ -32,25 +32,25 @@ Work through phases in order. For each phase:
 
 | # | Phase | Autonomous? | Input exists when... | Output file |
 |---|-------|-------------|----------------------|-------------|
-| 0 | `onboarding` | — | `founder-opportunity-map/founder-context.md` exists | same |
-| 1 | `opportunity-map` | ✅ yes | founder-context.md exists | `founder-opportunity-map/opportunity-memo-output.md` |
-| 2 | `discovery` | ❌ blocked | — | `customer-discovery-synthesizer/customer-transcript-1.md` (≥3 files) |
-| 3 | `synthesis` | ✅ yes | ≥3 `customer-transcript-*.md` files | `customer-discovery-synthesizer/customer-synthesis-output.md` |
-| 4 | `panel` | ✅ yes | `customer-synthesis-output.md` exists | `synthetic-customer-panel/synthetic-customer-panel-output.md` |
-| 5 | `strategy` | ✅ yes | synthesis + panel outputs exist | `product-strategy-brief/product-brief-output.md` |
-| 6 | `prototype-scope` | ✅ yes | `product-brief-output.md` exists | `prototype-scope/prototype-scope-output.md` |
-| 7 | `build` | ❌ blocked | — | `prototype-review/build-notes.md` |
-| 8 | `prototype-review` | ✅ yes | `build-notes.md` exists | `prototype-review/prototype-review-output.md` |
-| 9 | `first-users` | ✅ yes | `prototype-review-output.md` exists | `first-users-outreach/first-users-outreach-output.md` |
-| 10 | `outreach-execution` | ❌ blocked | — | `first-users-outreach/outreach-results.md` |
-| 11 | `pmf-review` | ✅ yes | `outreach-results.md` exists | `pmf-signal-review/pmf-signal-review-output.md` |
-| 12 | `growth-experiments` | ✅ yes | `pmf-signal-review-output.md` exists | `growth-experiment-backlog/growth-experiment-backlog-output.md` |
-| 13 | `experiment-execution` | ❌ blocked | — | `growth-experiment-backlog/experiment-results.md` |
-| 14 | `pmf-review-2` | ✅ yes | `experiment-results.md` exists | `pmf-signal-review/pmf-signal-review-2-output.md` |
-| 15 | `hiring` | ✅ yes* | `product-brief-output.md` exists | `founder-hiring-scorecard/hiring-scorecard-output.md` |
-| 16 | `fundraising` | ✅ yes | `pmf-signal-review-output.md` exists | `fundraising-narrative/fundraising-narrative-output.md` |
-| 17 | `demo-day` | ✅ yes | `fundraising-narrative-output.md` exists | `demo-day-script/demo-day-script-output.md` |
-| ∞ | `weekly-review` | ✅ ongoing | always | `weekly-founder-review/weekly-review-[date].md` |
+| 0 | `onboarding` | — | `opportunity/founder-context.md` exists | same |
+| 1 | `opportunity-map` | ✅ yes | founder-context.md exists | `opportunity/opportunity-memo.md` |
+| 2 | `discovery` | ❌ blocked | — | `customers/customer-transcript-1.md` (≥3 files) |
+| 3 | `synthesis` | ✅ yes | ≥3 `customer-transcript-*.md` files | `customers/synthesis.md` |
+| 4 | `panel` | ✅ yes | `synthesis.md` exists | `customers/simulated-panel.md` |
+| 5 | `strategy` | ✅ yes | synthesis + panel outputs exist | `product/strategy-brief.md` |
+| 6 | `prototype-scope` | ✅ yes | `strategy-brief.md` exists | `product/prototype-scope.md` |
+| 7 | `build` | ❌ blocked | — | `product/build-notes.md` |
+| 8 | `prototype-review` | ✅ yes | `build-notes.md` exists | `product/prototype-review.md` |
+| 9 | `first-users` | ✅ yes | `prototype-review.md` exists | `traction/outreach-plan.md` |
+| 10 | `outreach-execution` | ❌ blocked | — | `traction/outreach-results.md` |
+| 11 | `pmf-review` | ✅ yes | `outreach-results.md` exists | `traction/pmf-signals.md` |
+| 12 | `growth-experiments` | ✅ yes | `pmf-signals.md` exists | `traction/experiment-backlog.md` |
+| 13 | `experiment-execution` | ❌ blocked | — | `traction/experiment-results.md` |
+| 14 | `pmf-review-2` | ✅ yes | `experiment-results.md` exists | `traction/pmf-signals-2.md` |
+| 15 | `hiring` | ✅ yes* | `strategy-brief.md` exists | `team/hiring-scorecard-[role].md` |
+| 16 | `fundraising` | ✅ yes | `pmf-signals.md` exists | `pitch/fundraising-narrative.md` |
+| 17 | `demo-day` | ✅ yes | `fundraising-narrative.md` exists | `pitch/demo-day-script.md` |
+| ∞ | `weekly-review` | ✅ ongoing | always | `ops/weekly-review-[date].md` |
 
 *Phase 15 (hiring) runs in parallel once the strategy is clear — not gated on PMF.
 
@@ -60,7 +60,7 @@ Work through phases in order. For each phase:
 
 ### Step 1 — Establish current state
 
-Read `STARTUP/loop-state.md`. Extract:
+Read `STARTUP/ops/loop-state.md`. Extract:
 - `status` (RUNNING / BLOCKED / DONE)
 - `current_phase` (the phase name from the table)
 - `blocked_on` (what the founder needs to provide, if BLOCKED)
@@ -76,16 +76,16 @@ has been cleared.
 
 **Resolution checks by phase:**
 
-- `discovery`: Count files matching `STARTUP/customer-discovery-synthesizer/customer-transcript-*.md`.
+- `discovery`: Count files matching `STARTUP/customers/customer-transcript-*.md`.
   Resolved if count ≥ 3.
 
-- `build`: Check whether `STARTUP/prototype-review/build-notes.md` exists.
+- `build`: Check whether `STARTUP/product/build-notes.md` exists.
   Resolved if file exists and is non-empty.
 
-- `outreach-execution`: Check whether `STARTUP/first-users-outreach/outreach-results.md` exists.
+- `outreach-execution`: Check whether `STARTUP/traction/outreach-results.md` exists.
   Resolved if file exists and is non-empty.
 
-- `experiment-execution`: Check whether `STARTUP/growth-experiment-backlog/experiment-results.md` exists.
+- `experiment-execution`: Check whether `STARTUP/traction/experiment-results.md` exists.
   Resolved if file exists and is non-empty.
 
 **If still blocked:** Report the current block (see Block Report format below).
@@ -116,7 +116,7 @@ multiple phases in a single run when it can.
 ### Step 4 — Write block (when stopping)
 
 When the loop hits a blocked phase, write the Block Report to the conversation
-AND update `STARTUP/loop-state.md` with the block details.
+AND update `STARTUP/ops/loop-state.md` with the block details.
 
 **Block Report format:**
 ```
@@ -149,7 +149,7 @@ To resume:
 ### Step 5 — Update loop-state.md
 
 After every run (whether it blocked or completed phases), rewrite
-`STARTUP/loop-state.md` with the full current state.
+`STARTUP/ops/loop-state.md` with the full current state.
 
 ---
 
@@ -180,7 +180,7 @@ After every run (whether it blocked or completed phases), rewrite
 | Phase | Status | Date | Notes |
 |-------|--------|------|-------|
 | onboarding | ✅ done | [date] | founder-context.md exists |
-| opportunity-map | ✅ done | [date] | opportunity-memo-output.md written |
+| opportunity-map | ✅ done | [date] | opportunity-memo.md written |
 | discovery | ⏸ blocked | [date] | waiting for transcripts |
 
 ## What the loop did on last run
@@ -197,9 +197,9 @@ After every run (whether it blocked or completed phases), rewrite
 
 ## Handling the first run (no loop-state.md yet)
 
-If `STARTUP/loop-state.md` does not exist:
+If `STARTUP/ops/loop-state.md` does not exist:
 
-1. Check whether `founder-opportunity-map/founder-context.md` exists.
+1. Check whether `STARTUP/opportunity/founder-context.md` exists.
    - If not: tell the founder to run `/new-startup` first, stop.
    - If yes: treat onboarding as done, set current phase to `opportunity-map`.
 
@@ -207,7 +207,7 @@ If `STARTUP/loop-state.md` does not exist:
    (the founder may have run individual skills manually before starting the loop).
    Mark those phases as done in the initial history.
 
-3. Create `loop-state.md` with the derived current state.
+3. Create `STARTUP/ops/loop-state.md` with the derived current state.
 
 4. Continue from Step 3.
 

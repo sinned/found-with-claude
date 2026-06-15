@@ -12,7 +12,7 @@ and an effort estimate.
 ## Input
 
 Look for:
-- `work/[startup]/pmf-signal-review/pmf-signal-review-output.md` — what is working and what is not
+- `work/[startup]/traction/pmf-signals.md` — what is working and what is not
 - The founder's description of the current bottleneck:
   - "We have users but they're not activating"
   - "Users activate but don't retain"
@@ -58,7 +58,7 @@ or `/customer-discovery-synthesizer` first.
 
 7. **Write the backlog** — Follow the output format below.
 
-8. **Save output** — Write to `work/[startup]/growth-experiment-backlog/growth-experiment-backlog-output.md`.
+8. **Save output** — Write to `work/[startup]/traction/experiment-backlog.md`.
 
 ## Output format
 

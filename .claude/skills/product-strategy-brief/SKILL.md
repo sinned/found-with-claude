@@ -15,9 +15,9 @@ you have this. If you cannot write a clear brief, you are not ready to build.
 ## Input
 
 Look for prior work in:
-- `work/[startup]/founder-opportunity-map/opportunity-memo-output.md` — from `/founder-opportunity-map`
-- `work/[startup]/customer-discovery-synthesizer/customer-synthesis-output.md` — from `/customer-discovery-synthesizer`
-- `work/[startup]/synthetic-customer-panel/synthetic-customer-panel-output.md` — from `/synthetic-customer-panel`
+- `work/[startup]/opportunity/opportunity-memo.md` — from `/founder-opportunity-map`
+- `work/[startup]/customers/synthesis.md` — from `/customer-discovery-synthesizer`
+- `work/[startup]/customers/simulated-panel.md` — from `/synthetic-customer-panel`
 - Any additional context from the founder in this conversation
 
 If the founder has not done customer discovery, say so explicitly before writing
@@ -52,7 +52,25 @@ the brief. A brief built from hunches is a hypothesis, not a strategy.
 
 8. **Write the brief** — Follow the output format below.
 
-9. **Save output** — Write to `work/[startup]/product-strategy-brief/product-brief-output.md`.
+9. **Save output** — Write to `work/[startup]/product/strategy-brief.md`.
+
+10. **Capture knowledge** — Extract the most important facts into the knowledge store.
+    See `knowledge/README.md` for the full schema.
+
+    For each key bet listed in the brief, check `knowledge/[startup]/assumptions/`
+    first. If an assumption entity already exists, update it with new evidence or
+    confidence. If it is new, write `knowledge/[startup]/assumptions/[slug].md`
+    (type: `assumption`).
+
+    For the target customer definition, check `knowledge/[startup]/customers/` first.
+    Update the existing customer entity with the strategy-level refinement (job-to-be-done,
+    why existing solutions fail) or create a new one if the brief defines a new segment.
+
+    For the core strategic choice (what we are building and why, including what we
+    are NOT building), write `knowledge/[startup]/decisions/[slug].md` (type: `decision`).
+    Document the alternatives considered and the condition that would cause a revisit.
+
+    Use `source: product-strategy-brief` in the frontmatter.
 
 ## Output format
 

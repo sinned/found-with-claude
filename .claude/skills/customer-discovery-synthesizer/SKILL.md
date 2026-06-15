@@ -13,8 +13,8 @@ the most important quotes, and flagging what is still unknown.
 
 Look for interview material in:
 - Files mentioned in the current conversation
-- `work/[startup]/customer-discovery-synthesizer/customer-transcript-*.md` — individual transcripts
-- `work/[startup]/founder-opportunity-map/messy-founder-notes.md` — raw notes from calls
+- `work/[startup]/customers/customer-transcript-*.md` — individual transcripts
+- `work/[startup]/opportunity/founder-notes.md` — raw notes from calls
 - Any other files the founder points to
 
 Accept any format: structured Q&A, stream-of-consciousness notes, bullet lists,
@@ -55,7 +55,28 @@ If 5+ transcripts are available: look for convergence across interviews.
 
 7. **Write the synthesis** — Follow the output format below.
 
-8. **Save output** — Write to `work/[startup]/customer-discovery-synthesizer/customer-synthesis-output.md`.
+8. **Save output** — Write to `work/[startup]/customers/synthesis.md`.
+
+9. **Capture knowledge** — Extract the most important facts into the knowledge store.
+   See `knowledge/README.md` for the full schema.
+
+   For each pattern that appeared in 2+ interviews, write
+   `knowledge/[startup]/insights/[slug].md` (type: `insight`). Include the frequency,
+   a best quote, and the product implication.
+
+   For each distinct customer type that emerges from the interviews, write
+   `knowledge/[startup]/customers/[slug].md` (type: `customer`). Include their
+   job-to-be-done, how they describe the pain, current workarounds, and what would
+   make them switch.
+
+   For the riskiest assumption identified, write
+   `knowledge/[startup]/assumptions/[slug].md` (type: `assumption`). Set
+   `validation status: unvalidated` and document how to test it.
+
+   For each surprise (unexpected finding), consider whether it rises to an insight
+   worth preserving. If yes, write it as a separate insight entity.
+
+   Use `source: customer-discovery-synthesizer` in the frontmatter.
 
 ## Output format
 

@@ -17,23 +17,34 @@ Run this once per startup, before invoking any other skill.
 
 2. **Create the workspace**
 
-   Create `work/startup-N/` with subdirectories for every skill:
+   Create `work/startup-N/` organized by the company's knowledge corpus — not by skill:
    ```
    work/startup-N/
-     founder-opportunity-map/
-     customer-discovery-synthesizer/
-     synthetic-customer-panel/
-     product-strategy-brief/
-     prototype-scope/
-     prototype-review/
-     first-users-outreach/
-     pmf-signal-review/
-     growth-experiment-backlog/
-     founder-hiring-scorecard/
-     fundraising-narrative/
-     demo-day-script/
-     weekly-founder-review/
+     opportunity/        ← problem space, market analysis, founder context and notes
+     customers/          ← interview transcripts, synthesis, simulated customer panels
+     product/            ← strategy brief, prototype scope, build evidence, prototype review
+     traction/           ← outreach plans, first users, PMF signals, growth experiments
+     team/               ← hiring scorecards, role definitions
+     pitch/              ← fundraising narrative, demo day script, investor materials
+     ops/                ← weekly reviews, loop state
    ```
+
+   Also create `knowledge/startup-N/` with subdirectories for structured knowledge entities:
+   ```
+   knowledge/startup-N/
+     insights/           ← cross-cutting learnings from research or experimentation
+     problems/           ← specific pain points with evidence
+     customers/          ← segment profiles and archetypes
+     assumptions/        ← tracked hypotheses (unvalidated → validated/invalidated)
+     decisions/          ← product and strategy decisions with reasoning
+     signals/            ← PMF signals with strength and evidence
+     experiments/        ← growth experiments with results
+     people/             ← individual contacts and early users
+   ```
+
+   `work/` is for full output documents — raw, may be overwritten.
+   `knowledge/` is for curated facts that accumulate over time across skill runs.
+   See `knowledge/README.md` for the schema and future external store contract.
 
 3. **Set as active**
 
@@ -49,7 +60,7 @@ Run this once per startup, before invoking any other skill.
    - "What do you want to figure out first — the problem, the customer, the product, or something else?"
 
    Their answers do not need to be polished. Write them as-is into
-   `work/startup-N/founder-opportunity-map/founder-context.md` using the format below.
+   `work/startup-N/opportunity/founder-context.md` using the format below.
 
 5. **Confirm and suggest the first skill**
 

@@ -1,7 +1,7 @@
 # Product Strategy Brief — Example Output
 
 *Condensed example from the investor update automation use case.*
-*Full context in `work/[startup]/product-strategy-brief/product-brief-output.md`.*
+*Full context in `work/[startup]/product/strategy-brief.md`.*
 
 ---
 

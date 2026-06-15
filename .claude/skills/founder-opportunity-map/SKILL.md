@@ -15,8 +15,8 @@ Anything the founder brings: industry observations, frustrations they have seen,
 problems they have personally experienced, markets they know well, or ideas they
 are already considering. Look for this in:
 - The current conversation
-- `work/[startup]/founder-opportunity-map/founder-context.md` if it exists
-- `work/[startup]/founder-opportunity-map/messy-founder-notes.md` if it exists
+- `work/[startup]/opportunity/founder-context.md` if it exists
+- `work/[startup]/opportunity/founder-notes.md` if it exists
 - Any other notes or files the founder mentions
 
 If the founder has not provided much, ask one question: "What work or industry do
@@ -47,7 +47,22 @@ you know better than most people?" Then proceed with their answer.
 
 6. **Write the memo** — Follow the output format below.
 
-7. **Save output** — Write to `work/[startup]/founder-opportunity-map/opportunity-memo-output.md`.
+7. **Save output** — Write to `work/[startup]/opportunity/opportunity-memo.md`.
+
+8. **Capture knowledge** — Extract the most important facts into the knowledge store.
+   See `knowledge/README.md` for the full schema.
+
+   For each clearly identified pain point (score ≥ 3 on pain intensity), write
+   `knowledge/[startup]/problems/[slug].md` (type: `problem`).
+
+   For the top-ranked opportunity, write `knowledge/[startup]/decisions/focus-on-[area].md`
+   (type: `decision`) — documenting what the founder is choosing to pursue and why.
+
+   For any assumption embedded in the opportunity (the "key question to answer"),
+   write `knowledge/[startup]/assumptions/[slug].md` (type: `assumption`) — tracking
+   it as unvalidated so later skills know to probe it.
+
+   Use `source: founder-opportunity-map` in the frontmatter.
 
 ## Output format
 
