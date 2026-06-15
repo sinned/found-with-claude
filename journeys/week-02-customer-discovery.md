@@ -19,7 +19,7 @@ Sofia came out of Step 1 with one reframe: the trust problem is more important
 than the gathering problem. Every interview in Step 2 should probe this question.
 
 Before starting Step 2 interviews, she set up:
-- `examples/customer-transcript-[N].md` — one file per interview
+- `work/customer-discovery-synthesizer/customer-transcript-[N].md` — one file per interview
 - `.claude/skills/customer-discovery-synthesizer/templates/interview-guide.md` — 
   used to prepare for each call
 
@@ -48,7 +48,7 @@ they caught a wrong number once.
 
 ## Friday: synthesize
 
-Sofia dropped all 7 transcripts into `examples/` and ran:
+Sofia dropped all 7 transcripts into `work/customer-discovery-synthesizer/` and ran:
 ```
 /customer-discovery-synthesizer
 ```

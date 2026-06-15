@@ -15,8 +15,8 @@ Anything the founder brings: industry observations, frustrations they have seen,
 problems they have personally experienced, markets they know well, or ideas they
 are already considering. Look for this in:
 - The current conversation
-- `examples/founder-context.md` if it exists
-- `examples/messy-founder-notes.md` if it exists
+- `work/founder-opportunity-map/founder-context.md` if it exists
+- `work/founder-opportunity-map/messy-founder-notes.md` if it exists
 - Any other notes or files the founder mentions
 
 If the founder has not provided much, ask one question: "What work or industry do
@@ -47,7 +47,7 @@ you know better than most people?" Then proceed with their answer.
 
 6. **Write the memo** — Follow the output format below.
 
-7. **Save output** — Write to `examples/opportunity-memo-output.md`.
+7. **Save output** — Write to `work/founder-opportunity-map/opportunity-memo-output.md`.
 
 ## Output format
 

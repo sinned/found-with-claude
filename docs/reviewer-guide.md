@@ -55,9 +55,9 @@ Each SKILL.md follows the same format as `prototype-with-claude`:
 
 **The example inputs and outputs:**
 
-- `examples/founder-context.md` — sample founder context
-- `examples/customer-transcript-1.md` — sample interview transcript
-- `examples/opportunity-memo-output.md` — sample skill output
+- `work/founder-opportunity-map/founder-context.md` — sample founder context
+- `work/customer-discovery-synthesizer/customer-transcript-1.md` — sample interview transcript
+- `work/founder-opportunity-map/opportunity-memo-output.md` — sample skill output
 
 ---
 
@@ -68,12 +68,12 @@ Open the repo in Claude Code and try these:
 ```
 /founder-opportunity-map
 ```
-Input: anything in `examples/founder-context.md`. Expected: structured opportunity memo.
+Input: anything in `work/founder-opportunity-map/founder-context.md`. Expected: structured opportunity memo.
 
 ```
 /customer-discovery-synthesizer
 ```
-Input: `examples/customer-transcript-1.md`. Expected: synthesis with patterns and quotes.
+Input: `work/customer-discovery-synthesizer/customer-transcript-1.md`. Expected: synthesis with patterns and quotes.
 
 ```
 /weekly-founder-review

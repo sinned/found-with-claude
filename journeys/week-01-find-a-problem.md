@@ -21,7 +21,7 @@ discovery yet. Her goal for Step 1: figure out which problem area is worth pursu
 ## Monday: set up the repo
 
 Sofia cloned `founding-with-claude` and opened it in Claude Code. She dropped her
-notes into `examples/founder-context.md` and `examples/messy-founder-notes.md`.
+notes into `work/founder-opportunity-map/founder-context.md` and `work/founder-opportunity-map/messy-founder-notes.md`.
 
 The notes were messy — two call summaries, a few random observations, and a
 "what if" paragraph she had written on a walk.

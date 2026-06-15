@@ -40,7 +40,7 @@ See `journeys/week-01-find-a-problem.md` for the detailed account.
 **Input:** 7 customer interviews (5 seed-stage founders, 2 Series A)
 
 **What happened:**
-Sofia ran 7 interviews in 5 days. She dropped all transcripts in `examples/`.
+Sofia ran 7 interviews in 5 days. She dropped all transcripts in `work/customer-discovery-synthesizer/`.
 The synthesis revealed three consistent patterns:
 1. Data gathering > writing time (7/7 interviews)
 2. Format never changes (6/7)

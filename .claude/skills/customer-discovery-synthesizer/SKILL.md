@@ -13,8 +13,8 @@ the most important quotes, and flagging what is still unknown.
 
 Look for interview material in:
 - Files mentioned in the current conversation
-- `examples/customer-transcript-*.md` — individual transcripts
-- `examples/messy-founder-notes.md` — raw notes from calls
+- `work/customer-discovery-synthesizer/customer-transcript-*.md` — individual transcripts
+- `work/founder-opportunity-map/messy-founder-notes.md` — raw notes from calls
 - Any other files the founder points to
 
 Accept any format: structured Q&A, stream-of-consciousness notes, bullet lists,
@@ -55,7 +55,7 @@ If 5+ transcripts are available: look for convergence across interviews.
 
 7. **Write the synthesis** — Follow the output format below.
 
-8. **Save output** — Write to `examples/customer-synthesis-output.md`.
+8. **Save output** — Write to `work/customer-discovery-synthesizer/customer-synthesis-output.md`.
 
 ## Output format
 

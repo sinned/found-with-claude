@@ -13,7 +13,7 @@ All 13 skills in this pack, with description, input, output, and phase.
 **Output:** Ranked opportunity memo with 3-6 areas scored on pain, underservice, and founder fit
 
 **Key outputs:**
-- `examples/opportunity-memo-output.md`
+- `work/founder-opportunity-map/opportunity-memo-output.md`
 
 **Template:** `.claude/skills/founder-opportunity-map/templates/opportunity-memo.md`
 
@@ -28,7 +28,7 @@ All 13 skills in this pack, with description, input, output, and phase.
 **Output:** Synthesis: patterns, jobs-to-be-done, quotes, riskiest assumption, open questions
 
 **Key outputs:**
-- `examples/customer-synthesis-output.md`
+- `work/customer-discovery-synthesizer/customer-synthesis-output.md`
 
 **Template:** `.claude/skills/customer-discovery-synthesizer/templates/interview-guide.md`
 
@@ -43,7 +43,7 @@ All 13 skills in this pack, with description, input, output, and phase.
 **Output:** 4-6 archetype reactions, cross-panel analysis, hypotheses to test
 
 **Key outputs:**
-- `examples/synthetic-customer-panel-output.md`
+- `work/synthetic-customer-panel/synthetic-customer-panel-output.md`
 
 **Caution:** Simulation tool only. See `docs/using-simulation-responsibly.md`.
 
@@ -58,7 +58,7 @@ All 13 skills in this pack, with description, input, output, and phase.
 **Output:** One-page brief: target customer, core problem, solution hypothesis, key bets, out-of-scope
 
 **Key outputs:**
-- `examples/product-brief-output.md`
+- `work/product-strategy-brief/product-brief-output.md`
 
 ---
 
@@ -71,7 +71,7 @@ All 13 skills in this pack, with description, input, output, and phase.
 **Output:** Prototype scope document, success criteria, readiness checklist, handoff to prototype-with-claude
 
 **Key outputs:**
-- `examples/prototype-scope-output.md`
+- `work/prototype-scope/prototype-scope-output.md`
 
 **References:**
 - `.claude/skills/prototype-scope/references/prototype-with-claude.md`
@@ -87,7 +87,7 @@ All 13 skills in this pack, with description, input, output, and phase.
 **Output:** Honest verdict (Proven / Disproven / Inconclusive / Blocked) + next steps
 
 **Key outputs:**
-- `examples/prototype-review-output.md`
+- `work/prototype-review/prototype-review-output.md`
 
 ---
 
@@ -100,7 +100,7 @@ All 13 skills in this pack, with description, input, output, and phase.
 **Output:** Outreach messages (warm, referral, cold) + onboarding ask + feedback capture guide
 
 **Key outputs:**
-- `examples/first-users-outreach-output.md`
+- `work/first-users-outreach/first-users-outreach-output.md`
 
 ---
 
@@ -113,7 +113,7 @@ All 13 skills in this pack, with description, input, output, and phase.
 **Output:** Signal memo with verdict (Strong / Mixed / Weak) and next steps
 
 **Key outputs:**
-- `examples/pmf-signal-review-output.md`
+- `work/pmf-signal-review/pmf-signal-review-output.md`
 
 ---
 
@@ -126,7 +126,7 @@ All 13 skills in this pack, with description, input, output, and phase.
 **Output:** Prioritized backlog of 3 experiments to run this week + full backlog
 
 **Key outputs:**
-- `examples/growth-experiment-backlog-output.md`
+- `work/growth-experiment-backlog/growth-experiment-backlog-output.md`
 
 ---
 
@@ -139,7 +139,7 @@ All 13 skills in this pack, with description, input, output, and phase.
 **Output:** Hiring scorecard with must-haves, nice-to-haves, red flags, and interview questions
 
 **Key outputs:**
-- `examples/hiring-scorecard-[role].md`
+- `work/founder-hiring-scorecard/hiring-scorecard-[role].md`
 
 ---
 
@@ -152,7 +152,7 @@ All 13 skills in this pack, with description, input, output, and phase.
 **Output:** Investor memo + objection map
 
 **Key outputs:**
-- `examples/fundraising-narrative-output.md`
+- `work/fundraising-narrative/fundraising-narrative-output.md`
 
 **Timing note:** Do not run this without real traction. A narrative without traction
 is a hypothesis presentation.
@@ -168,7 +168,7 @@ is a hypothesis presentation.
 **Output:** Word-for-word 2-minute script with timing guide and danger zones
 
 **Key outputs:**
-- `examples/demo-day-script-output.md`
+- `work/demo-day-script/demo-day-script-output.md`
 
 ---
 
@@ -181,7 +181,7 @@ is a hypothesis presentation.
 **Output:** Structured weekly review: what was learned, what was done, what was heard, what to do next
 
 **Key outputs:**
-- `examples/weekly-review-[date].md`
+- `work/weekly-founder-review/weekly-review-[date].md`
 
 **Template:** `.claude/skills/weekly-founder-review/templates/weekly-founder-review.md`
 

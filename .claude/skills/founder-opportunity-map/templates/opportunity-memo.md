@@ -51,5 +51,5 @@ List any specific product ideas you are considering. Include why you think each 
 
 ## Run /founder-opportunity-map with this context
 
-Save this file as `examples/founder-context.md` and run `/founder-opportunity-map`.
+Save this file as `work/founder-opportunity-map/founder-context.md` and run `/founder-opportunity-map`.
 Claude will read this file and produce a ranked opportunity memo.

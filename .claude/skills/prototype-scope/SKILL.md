@@ -20,10 +20,10 @@ See `references/prototype-with-claude.md`.
 
 ## Input
 
-Primary input: `examples/product-brief-output.md` (from `/product-strategy-brief`)
+Primary input: `work/product-strategy-brief/product-brief-output.md` (from `/product-strategy-brief`)
 
 Also useful:
-- `examples/customer-synthesis-output.md` — to confirm which customer behavior to demonstrate
+- `work/customer-discovery-synthesizer/customer-synthesis-output.md` — to confirm which customer behavior to demonstrate
 - Any constraints the founder mentions (time, team size, technical stack)
 
 If no product brief exists, stop and say: "Please run `/product-strategy-brief` first.
@@ -59,7 +59,7 @@ A prototype scope without a strategy brief will produce the wrong thing."
 
 9. **Write the scope document** — Follow the output format below.
 
-10. **Save output** — Write to `examples/prototype-scope-output.md`.
+10. **Save output** — Write to `work/prototype-scope/prototype-scope-output.md`.
 
 ## Output format
 

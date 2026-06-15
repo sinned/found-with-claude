@@ -1,6 +1,6 @@
 # Customer Discovery Synthesis — Example Output
 
-*See `examples/customer-synthesis-output.md` for the full worked example*
+*See `work/customer-discovery-synthesizer/customer-synthesis-output.md` for the full worked example*
 *from the investor update use case (7 interviews, seed-stage founders).*
 
 This example is a condensed version showing the format and level of specificity
@@ -53,4 +53,4 @@ you send this to your investors without going back to check Stripe?"
 
 ---
 
-*Full example in `examples/customer-synthesis-output.md`*
+*Full example in `work/customer-discovery-synthesizer/customer-synthesis-output.md`*

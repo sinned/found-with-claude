@@ -11,9 +11,9 @@ plan: who to reach, what to say, and how to capture feedback from early users.
 ## Input
 
 Look for:
-- `examples/product-brief-output.md` — who the target customer is
-- `examples/prototype-scope-output.md` — what the prototype does
-- `examples/customer-synthesis-output.md` — specific people or companies mentioned in discovery
+- `work/product-strategy-brief/product-brief-output.md` — who the target customer is
+- `work/prototype-scope/prototype-scope-output.md` — what the prototype does
+- `work/customer-discovery-synthesizer/customer-synthesis-output.md` — specific people or companies mentioned in discovery
 - Any existing network context the founder mentions ("I know 50 founders in this space")
 
 The goal is the first 10 users, not the first 10,000. This is a manual, personal
@@ -46,7 +46,7 @@ outreach plan — not a marketing funnel.
 
 6. **Write the outreach plan** — Follow the output format below.
 
-7. **Save output** — Write to `examples/first-users-outreach-output.md`.
+7. **Save output** — Write to `work/first-users-outreach/first-users-outreach-output.md`.
 
 ## Output format
 

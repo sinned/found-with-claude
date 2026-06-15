@@ -15,9 +15,9 @@ you have this. If you cannot write a clear brief, you are not ready to build.
 ## Input
 
 Look for prior work in:
-- `examples/opportunity-memo-output.md` — from `/founder-opportunity-map`
-- `examples/customer-synthesis-output.md` — from `/customer-discovery-synthesizer`
-- `examples/synthetic-customer-panel-output.md` — from `/synthetic-customer-panel`
+- `work/founder-opportunity-map/opportunity-memo-output.md` — from `/founder-opportunity-map`
+- `work/customer-discovery-synthesizer/customer-synthesis-output.md` — from `/customer-discovery-synthesizer`
+- `work/synthetic-customer-panel/synthetic-customer-panel-output.md` — from `/synthetic-customer-panel`
 - Any additional context from the founder in this conversation
 
 If the founder has not done customer discovery, say so explicitly before writing
@@ -52,7 +52,7 @@ the brief. A brief built from hunches is a hypothesis, not a strategy.
 
 8. **Write the brief** — Follow the output format below.
 
-9. **Save output** — Write to `examples/product-brief-output.md`.
+9. **Save output** — Write to `work/product-strategy-brief/product-brief-output.md`.
 
 ## Output format
 

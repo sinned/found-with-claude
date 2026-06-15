@@ -12,8 +12,8 @@ can say aloud.
 ## Input
 
 Look for:
-- `examples/fundraising-narrative-output.md` — the full narrative
-- `examples/pmf-signal-review-output.md` — the traction numbers
+- `work/fundraising-narrative/fundraising-narrative-output.md` — the full narrative
+- `work/pmf-signal-review/pmf-signal-review-output.md` — the traction numbers
 - Any specific Demo Day format the founder mentions (YC is 2 minutes, others vary)
 - Whether there is a live demo in the middle (changes the pacing)
 
@@ -50,7 +50,7 @@ script without a narrative is just words.
 
 7. **Write the script** — Follow the output format below.
 
-8. **Save output** — Write to `examples/demo-day-script-output.md`.
+8. **Save output** — Write to `work/demo-day-script/demo-day-script-output.md`.
 
 ## Output format
 

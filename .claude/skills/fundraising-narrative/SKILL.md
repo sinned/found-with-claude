@@ -17,9 +17,9 @@ user learning before writing this narrative.
 ## Input
 
 Look for:
-- `examples/product-brief-output.md` — the core strategy
-- `examples/pmf-signal-review-output.md` — what the signals show
-- `examples/customer-synthesis-output.md` — what customers said
+- `work/product-strategy-brief/product-brief-output.md` — the core strategy
+- `work/pmf-signal-review/pmf-signal-review-output.md` — what the signals show
+- `work/customer-discovery-synthesizer/customer-synthesis-output.md` — what customers said
 - Specific traction numbers the founder provides in the current conversation:
   - Revenue or ARR
   - Active users and retention
@@ -53,7 +53,7 @@ that blow up in diligence.
 
 5. **Write the narrative** — Follow the output format below.
 
-6. **Save output** — Write to `examples/fundraising-narrative-output.md`.
+6. **Save output** — Write to `work/fundraising-narrative/fundraising-narrative-output.md`.
 
 ## Output format
 

@@ -111,7 +111,7 @@ cd found-with-claude
 claude
 
 # 3. Drop your raw context
-# Put your notes, transcripts, or ideas in examples/founder-context.md
+# Put your notes, transcripts, or ideas in work/founder-opportunity-map/founder-context.md
 
 # 4. Start at the beginning
 /founder-opportunity-map
@@ -131,11 +131,11 @@ No setup. No API keys. No boilerplate. Just open Claude Code and invoke a skill.
 ### Input: bring your raw material
 
 Every skill is designed to work from rough input. Drop your actual notes, transcripts,
-and data into `examples/`. You do not need to clean it up first.
+and data into the relevant `work/<skill>/` folder. You do not need to clean it up first.
 
-- `examples/founder-context.md` — who you are, what you are building, what you know
-- `examples/messy-founder-notes.md` — raw notes from calls, walks, observations
-- `examples/customer-transcript-1.md` — interview transcripts verbatim
+- `work/founder-opportunity-map/founder-context.md` — who you are, what you are building, what you know
+- `work/founder-opportunity-map/messy-founder-notes.md` — raw notes from calls, walks, observations
+- `work/customer-discovery-synthesizer/customer-transcript-1.md` — interview transcripts verbatim
 - Anything else you have: screenshots descriptions, competitor notes, user emails
 
 ### Invocation: just run the command
@@ -237,7 +237,7 @@ Output: ranked opportunity memo. Investor updates rank #2. Your #1 surprise: the
 real pain is not writing the update — it is synthesizing what actually happened.
 
 **Step 2 — Talk to founders:**
-You do 7 calls. Drop the transcripts in `examples/`. Run:
+You do 7 calls. Drop the transcripts in `work/customer-discovery-synthesizer/`. Run:
 ```
 /customer-discovery-synthesizer
 ```
@@ -284,7 +284,7 @@ Where to look:
 - `docs/founder-journey-map.md` — how the skills connect
 - `docs/prototype-with-claude-integration.md` — integration with the sibling repo
 - `journeys/week-01-find-a-problem.md` — worked example of Step 1
-- `examples/` — sample founder inputs and skill outputs
+- `work/` — founder work organized by skill
 
 What makes this different:
 - Skills cover the full company-building loop, not just the coding phase

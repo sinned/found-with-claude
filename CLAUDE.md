@@ -51,8 +51,22 @@ Founders invoke skills with a slash command:
 
 ## Where to put raw material
 
-The founder should drop raw input into `examples/` — interview transcripts, messy notes,
-customer quotes, usage data, or anything else. Skills are designed to work from rough input.
+The founder's work lives in `work/`, organized by skill:
+- `work/founder-opportunity-map/` — founder context, notes, opportunity memos
+- `work/customer-discovery-synthesizer/` — interview transcripts, synthesis output
+- `work/synthetic-customer-panel/` — panel outputs
+- `work/product-strategy-brief/` — product briefs
+- `work/prototype-scope/` — scope documents
+- `work/prototype-review/` — review outputs
+- `work/first-users-outreach/` — outreach plans
+- `work/pmf-signal-review/` — signal memos, raw data
+- `work/growth-experiment-backlog/` — experiment backlogs
+- `work/founder-hiring-scorecard/` — hiring scorecards
+- `work/fundraising-narrative/` — investor memos
+- `work/demo-day-script/` — scripts
+- `work/weekly-founder-review/` — weekly reviews
+
+Drop raw input in the relevant skill folder. Skills are designed to work from rough input.
 
 ## The prototyping handoff
 
