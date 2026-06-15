@@ -120,6 +120,23 @@ designed for future export to an external durable store.
 
 ---
 
+## Example workspaces (read these first)
+
+`startup-1` and `startup-2` are **worked examples**, not real companies — they show what
+the skills produce when run end-to-end. Browse them to see the output before running
+anything yourself. Their customer interviews are **illustrative sample data**, not records
+of real conversations (provenance is noted inside each example).
+
+| Example | Idea | How far it goes |
+|---------|------|-----------------|
+| `startup-1` | Auto-generated weekly investor updates for founders | Full arc: opportunity → discovery → strategy → prototype → outreach → PMF → fundraising |
+| `startup-2` | Reduce chemical inputs in agriculture (AgroGuard — a resistance-aware decision layer for crop advisers) | Opportunity → discovery (5 sample interviews) → synthesis → panel → strategy brief → prototype scope |
+
+When you run `/new-startup`, it creates your own `startup-N` alongside these and switches
+`work/.current` to it — the examples stay for reference.
+
+---
+
 ## The idea-to-Demo-Day journey
 
 | Step | Focus | Skill |
@@ -184,7 +201,7 @@ Loop state is saved in `work/[startup]/loop-state.md` between runs.
 Where to look:
 - `CLAUDE.md` — project instructions for Claude Code
 - `.claude/skills/` — all 15 skills (13 journey skills + `/new-startup` + `/loop`)
-- `work/startup-1/` — demo startup with sample transcripts and outputs
+- `work/startup-1/` and `work/startup-2/` — two worked examples with sample transcripts and outputs (see "Example workspaces" above)
 - `docs/founder-journey-map.md` — how the skills connect
 
 What to run:
