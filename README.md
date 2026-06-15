@@ -1,113 +1,25 @@
 # found-with-claude
 
-An autonomous loop for founders building from idea to Demo Day.
+A Claude Skills pack for founders building from idea to Demo Day.
 
 ---
 
 Most AI coding tools start at code. Founders don't.
 
 Founders start with uncertainty — is this problem real? Who has it? What should
-we build first? What are the signals that tell us it's working?
+we build first? What signals tell us it's working?
 
-`found-with-claude` is a Claude Skills pack that covers the whole loop.
-Run `/loop` and it drives autonomously — synthesizing, analyzing, deciding —
-stopping only when it needs something only a founder can do: go talk to
-customers, build the prototype, do the outreach, run the experiments.
-
-Drop the result. Run `/loop` again. It picks up where it left off.
-
----
-
-## How it works
-
-```
-/new-startup        ← sets up your workspace, captures initial context
-/loop               ← runs until it needs you, then stops with exact instructions
-                       drop the requested input, run /loop again to resume
-```
-
-The loop knows four natural pause points — where AI can't substitute for the founder:
-
-| Block | What the loop needs | What you do |
-|-------|--------------------|----|
-| Discovery | Customer interview transcripts | Talk to 5–10 people, drop notes |
-| Build | Prototype + user reactions | Build in prototype-with-claude, drop build-notes.md |
-| Outreach execution | Who responded and what they said | Do the outreach, drop outreach-results.md |
-| Experiment execution | What the experiments showed | Run the experiments, drop experiment-results.md |
-
-Everything else — opportunity mapping, synthesis, customer simulation, product
-strategy, prototype scoping, PMF analysis, growth backlog, fundraising narrative,
-Demo Day script — runs autonomously.
+This repo gives founders 13 structured Claude Skills for that entire journey.
+Each skill is a repeatable process, not a chatbot conversation. Drop in your raw
+material — messy notes, interview transcripts, usage data — and get structured
+output you can act on the same day.
 
 ---
 
 ## The skills
 
-15 skills total. `/loop` orchestrates them. You can also invoke any skill directly.
-
-```
-.claude/skills/
-├── new-startup/                 → /new-startup
-├── loop/                        → /loop
-├── founder-opportunity-map/     → /founder-opportunity-map
-├── customer-discovery-synthesizer/ → /customer-discovery-synthesizer
-├── synthetic-customer-panel/    → /synthetic-customer-panel
-├── product-strategy-brief/      → /product-strategy-brief
-├── prototype-scope/             → /prototype-scope
-├── prototype-review/            → /prototype-review
-├── first-users-outreach/        → /first-users-outreach
-├── pmf-signal-review/           → /pmf-signal-review
-├── growth-experiment-backlog/   → /growth-experiment-backlog
-├── founder-hiring-scorecard/    → /founder-hiring-scorecard
-├── fundraising-narrative/       → /fundraising-narrative
-├── demo-day-script/             → /demo-day-script
-└── weekly-founder-review/       → /weekly-founder-review
-```
-
----
-
-## Why this exists
-
-Most "AI for founders" tooling treats founders as developers and stops at software
-prototyping. But prototyping is step 5 of an 11-step journey.
-
-Before you write a line of code, you need to:
-- Find a problem that is genuinely painful
-- Talk to people who have it
-- Understand what they are already doing about it
-- Decide what to build and why
-- Define what success looks like
-
-After you ship, you need to:
-- Get the first 10 users
-- Read the signals they send
-- Know when you have PMF and when you do not
-- Hire the right first person
-- Tell the story to investors
-
-Claude can compress every phase of this loop — not just the coding phase.
-
----
-
-## The founder learning loop
-
-```
-Problem → Customers → Synthesis → Strategy → Prototype → Users → PMF → Growth → Hire → Raise → Demo Day
-   ↑                                                                                               ↓
-   └───────────────────────────── What did we learn? ─────────────────────────────────────────────┘
-```
-
-`/loop` runs this. The skills are the mechanism. The loop state file tracks where
-you are. When the loop needs the founder, it says exactly what, where, and how much.
-
----
-
-## Skill map
-
 | Phase | Question | Skill |
 |-------|----------|-------|
-| Setup | — | `/new-startup` |
-| **Orchestration** | **What should run next?** | **`/loop`** |
 | Find a problem | Is this pain real and underserved? | `/founder-opportunity-map` |
 | Customer discovery | Who has it and what do they say? | `/customer-discovery-synthesizer` |
 | Customer simulation | What would real users say about this idea? | `/synthetic-customer-panel` |
@@ -137,60 +49,57 @@ claude
 # 3. Set up your startup workspace
 /new-startup
 
-# 4. Let the loop run
-/loop
-# → runs autonomously until it needs you
-# → tells you exactly what to do when it stops
-# → drop the input, run /loop again to resume
+# 4. Start at the beginning — or wherever you are
+/founder-opportunity-map
 ```
 
-No setup. No API keys. No boilerplate.
+No setup. No API keys. No boilerplate. Just open Claude Code and invoke a skill.
 
 ---
 
-## How the loop stops
+## How to use it
 
-When `/loop` hits a phase it can't run without you, it outputs a block report:
+### Input: bring your raw material
+
+Every skill works from rough input. Drop your actual notes, transcripts, and data
+into `work/[startup]/[skill]/`. No cleanup needed.
+
+- `work/[startup]/founder-opportunity-map/founder-context.md` — who you are, what you know
+- `work/[startup]/founder-opportunity-map/messy-founder-notes.md` — raw observations
+- `work/[startup]/customer-discovery-synthesizer/customer-transcript-1.md` — interview transcripts
+
+### Output: structured artifacts, not chat
+
+Each skill produces a specific document: a memo, a brief, a scorecard, a script.
+Outputs are saved in `work/[startup]/[skill]/` so they feed directly into the next skill.
+
+### Chain: each output is the next skill's input
 
 ```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-⏸  LOOP PAUSED — founder input needed
-
-Phase completed in this run:
-  ✅ opportunity-map
-  ✅ (awaiting your interviews)
-
-Paused at: discovery
-
-What the loop needs:
-  Customer interview transcripts — raw notes are fine
-
-Where to put them:
-  work/startup-1/customer-discovery-synthesizer/customer-transcript-N.md
-
-What "enough" looks like:
-  At least 3 files (more = better synthesis)
-
-To resume:
-  1. Do 5–10 customer calls
-  2. Drop your notes at the path above
-  3. Run /loop
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+/founder-opportunity-map   → opportunity memo
+/customer-discovery-synthesizer  → synthesis of interviews
+/synthetic-customer-panel  → stress-test before building
+/product-strategy-brief    → one-page brief
+/prototype-scope           → what to build, exactly
+/prototype-review          → did it prove the thesis?
+/first-users-outreach      → how to find the first 10 users
+/pmf-signal-review         → are the signals real?
+...
 ```
 
-The loop state is saved in `work/[startup]/loop-state.md` between runs.
+### Iterate: run skills multiple times
+
+Run `/founder-opportunity-map` before talking to customers. Run it again after.
+The difference between runs is what you learned.
 
 ---
 
 ## Work is organized by startup
 
-Each startup gets its own workspace:
-
 ```
 work/
-  .current            ← active startup name (e.g., "startup-1")
+  .current              ← active startup (e.g., "startup-1")
   startup-1/
-    loop-state.md     ← where the loop is, what it's waiting for
     founder-opportunity-map/
     customer-discovery-synthesizer/
     ...all 13 skill folders
@@ -198,8 +107,26 @@ work/
     ...
 ```
 
-Run `/new-startup` to create a new one. `work/.current` tracks which is active.
-All skills and `/loop` read `work/.current` automatically.
+Run `/new-startup` to create a workspace. `work/.current` tracks which is active.
+
+---
+
+## The idea-to-Demo-Day journey
+
+| Step | Focus | Skill |
+|------|-------|-------|
+| 1 | Find a problem | `/founder-opportunity-map` |
+| 2 | Customer discovery | `/customer-discovery-synthesizer` |
+| 3 | Customer simulation | `/synthetic-customer-panel` |
+| 4 | Product strategy | `/product-strategy-brief` |
+| 5 | Build prototype | `/prototype-scope` → `prototype-with-claude` |
+| 6 | First users | `/first-users-outreach` |
+| 7 | PMF sprint | `/pmf-signal-review` |
+| 8 | Growth | `/growth-experiment-backlog` |
+| 9 | Hiring | `/founder-hiring-scorecard` |
+| 10 | Fundraising | `/fundraising-narrative` |
+| 11 | Demo Day | `/demo-day-script` |
+| Ongoing | Review | `/weekly-founder-review` |
 
 ---
 
@@ -209,8 +136,7 @@ All skills and `/loop` read `work/.current` automatically.
 for the engineering sprint: plan, build, review, QA, ship.
 
 **The handoff:** `/prototype-scope` (here) defines what to build. gstack's
-`/office-hours` and `/autoplan` plan it. `/review`, `/qa`, `/ship` ship it.
-`/prototype-review` (here) evaluates the result. `/loop` orchestrates all of it.
+`/office-hours` and `/autoplan` plan it. `/prototype-review` (here) evaluates the result.
 
 See `docs/gstack-integration.md` for details.
 
@@ -221,35 +147,50 @@ See `docs/gstack-integration.md` for details.
 The sibling repo [`prototype-with-claude`](https://github.com/sinned/prototype-with-claude)
 is the dedicated build environment for the prototyping step.
 
-**How it connects:**
 1. `/prototype-scope` (here) → defines what to build
 2. Open `https://github.com/sinned/prototype-with-claude` → build and eval the AI behavior
-3. Drop `build-notes.md` in `work/[startup]/prototype-review/`
-4. Run `/loop` → resumes with `/prototype-review` automatically
+3. `/prototype-review` (here) → evaluate the result against the original strategy
+
+---
+
+## Once you know the process: `/loop`
+
+After you've run through the journey once and understand how the skills connect,
+`/loop` can orchestrate the whole thing autonomously.
+
+It runs every skill it can, and stops with exact instructions when it needs
+real-world founder input — customer interviews, the prototype build, outreach,
+experiment results. Drop the input, run `/loop` again, it resumes.
+
+```bash
+/loop   # runs what it can, stops when it needs you
+```
+
+Loop state is saved in `work/[startup]/loop-state.md` between runs.
 
 ---
 
 ## For Anthropic reviewers
 
 Where to look:
-- `CLAUDE.md` — project instructions for Claude Code (includes path resolution logic)
-- `.claude/skills/loop/SKILL.md` — the autonomous orchestrator
-- `.claude/skills/` — all 15 skills
-- `work/startup-1/loop-state.md` — example loop state
-- `work/startup-1/customer-discovery-synthesizer/` — 10 sample interview transcripts
+- `CLAUDE.md` — project instructions for Claude Code
+- `.claude/skills/` — all 15 skills (13 journey skills + `/new-startup` + `/loop`)
+- `work/startup-1/` — demo startup with sample transcripts and outputs
 - `docs/founder-journey-map.md` — how the skills connect
 
 What to run:
 ```
 /new-startup
-/loop
+/founder-opportunity-map
+/customer-discovery-synthesizer
+/weekly-founder-review
 ```
 
 What makes this different:
-- `/loop` runs the full journey autonomously, not just individual skills
-- Stops at the four phases where AI can't substitute for founder work
-- Loop state persists between runs so it resumes exactly where it left off
-- Each startup gets its own workspace; multiple startups can coexist
+- Skills cover the full company-building loop, not just the coding phase
+- Each skill is opinionated and structured — specific input, specific output
+- Skills chain: each output is the next skill's input
+- Work is organized per-startup so multiple ideas can coexist
 
 ---
 
